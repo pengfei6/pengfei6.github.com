@@ -4,9 +4,9 @@
   <subtitle>一只爱健身的程序猿</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://pengfei6.github.io/"/>
   <updated>2016-09-13T04:39:18.155Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://pengfei6.github.io/</id>
   
   <author>
     <name>semifi</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Naruto-Pictures</title>
-    <link href="http://yoursite.com/2016/09/13/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/"/>
-    <id>http://yoursite.com/2016/09/13/文章标题/</id>
+    <link href="http://pengfei6.github.io/2016/09/13/%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/"/>
+    <id>http://pengfei6.github.io/2016/09/13/文章标题/</id>
     <published>2016-09-13T03:12:04.000Z</published>
     <updated>2016-09-13T04:39:18.155Z</updated>
     
@@ -30,19 +30,19 @@
     
     </summary>
     
-      <category term="图片" scheme="http://yoursite.com/categories/%E5%9B%BE%E7%89%87/"/>
+      <category term="图片" scheme="http://pengfei6.github.io/categories/%E5%9B%BE%E7%89%87/"/>
     
     
-      <category term="picture" scheme="http://yoursite.com/tags/picture/"/>
+      <category term="picture" scheme="http://pengfei6.github.io/tags/picture/"/>
     
-      <category term="naruto" scheme="http://yoursite.com/tags/naruto/"/>
+      <category term="naruto" scheme="http://pengfei6.github.io/tags/naruto/"/>
     
   </entry>
   
   <entry>
     <title>Generator 函数的含义与用法</title>
-    <link href="http://yoursite.com/2015/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/"/>
-    <id>http://yoursite.com/2015/06/08/Generator 函数的含义与用法/</id>
+    <link href="http://pengfei6.github.io/2015/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/"/>
+    <id>http://pengfei6.github.io/2015/06/08/Generator 函数的含义与用法/</id>
     <published>2015-06-08T14:22:38.000Z</published>
     <updated>2016-09-13T06:10:13.098Z</updated>
     
@@ -92,14 +92,14 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="http://pengfei6.github.io/categories/JavaScript/"/>
     
     
-      <category term="Generator" scheme="http://yoursite.com/tags/Generator/"/>
+      <category term="Generator" scheme="http://pengfei6.github.io/tags/Generator/"/>
     
-      <category term="异步" scheme="http://yoursite.com/tags/%E5%BC%82%E6%AD%A5/"/>
+      <category term="异步" scheme="http://pengfei6.github.io/tags/%E5%BC%82%E6%AD%A5/"/>
     
-      <category term="回调" scheme="http://yoursite.com/tags/%E5%9B%9E%E8%B0%83/"/>
+      <category term="回调" scheme="http://pengfei6.github.io/tags/%E5%9B%9E%E8%B0%83/"/>
     
   </entry>
   
