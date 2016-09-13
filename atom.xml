@@ -41,10 +41,10 @@
   
   <entry>
     <title>Generator 函数的含义与用法</title>
-    <link href="http://pengfei6.github.io/2015/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/"/>
-    <id>http://pengfei6.github.io/2015/06/08/Generator 函数的含义与用法/</id>
-    <published>2015-06-08T14:22:38.000Z</published>
-    <updated>2016-09-13T06:10:13.098Z</updated>
+    <link href="http://pengfei6.github.io/2016/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/"/>
+    <id>http://pengfei6.github.io/2016/06/08/Generator 函数的含义与用法/</id>
+    <published>2016-06-08T14:22:38.000Z</published>
+    <updated>2016-09-13T12:21:26.694Z</updated>
     
     <content type="html"><![CDATA[<p>转载自<a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="external">阮一峰博客</a></p>
 <ul>
