@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2015/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/"/>
     <id>http://yoursite.com/2015/06/08/Generator 函数的含义与用法/</id>
     <published>2015-06-08T14:22:38.000Z</published>
-    <updated>2016-09-13T05:17:11.494Z</updated>
+    <updated>2016-09-13T06:10:13.098Z</updated>
     
     <content type="html"><![CDATA[<p>转载自<a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="external">阮一峰博客</a></p>
 <ul>
@@ -91,6 +91,8 @@
 &lt;h3 id=&quot;一、什么是异步？（省略。。。）&quot;&gt;&lt;a href=&quot;#一、什么是异步？（省略。。。）&quot; class=&quot;headerlink&quot; title=&quot;一、什么是异步？（省略。。。）&quot;&gt;&lt;/a&gt;一、什么是异步？（省略。。。）&lt;/h3&gt;&lt;h3 id=&quot;二、回调函数的概念&quot;&gt;&lt;a href=&quot;#二、回调函数的概念&quot; class=&quot;headerlink&quot; title=&quot;二、回调函数的概念&quot;&gt;&lt;/a&gt;二、回调函数的概念&lt;/h3&gt;&lt;p&gt;JavaScript 语言对异步编程的实现，就是回调函数。所谓回调函数，就是把任务的第二段单独写在一个函数里面，&lt;br&gt;等到重新执行这个任务的时候，就直接调用这个函数。它的英语名字 callback，直译过来就是”重新调用”。读取文件进行处理，是这样写的。&lt;br&gt;
     
     </summary>
+    
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
     
     
       <category term="Generator" scheme="http://yoursite.com/tags/Generator/"/>
