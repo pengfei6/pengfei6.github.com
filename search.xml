@@ -11,7 +11,7 @@
     
     <entry>
       <title><![CDATA[Generator 函数的含义与用法]]></title>
-      <url>http://pengfei6.github.io/2016/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/</url>
+      <url>http://pengfei6.github.io/2015/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/</url>
       <content type="html"><![CDATA[<p>转载自<a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="external">阮一峰博客</a></p>
 <ul>
 <li>以前异步编程的方法，大概有下面四种：<ul>
