@@ -18,7 +18,7 @@
 </blockquote>
 <p> JavaScript</p>
 <blockquote>
-<p>数据类型、面向对象、继承、闭包、插件、作用域、跨域、原型链、模块化、自定义事件、内存泄漏、事件机制、异步装载回调、模板引擎、Nodejs、JSON、ajax等。</p>
+<p>数据类型、面向对象、继承、闭包、插件、作用域、跨域、原型链、模块化、自定义事件、内存泄漏、事件机制、异步装载回调、模板引擎、Nodejs、JSON、ajax等。<br><a id="more"></a></p>
 </blockquote>
 <p> 综合</p>
 <blockquote>
@@ -840,6 +840,170 @@ function unsetCookie(name) {
     </entry>
     
     <entry>
+      <title><![CDATA[2015年大前端技术年终总结]]></title>
+      <url>http://pengfei6.github.io/2016/01/12/2015%E5%B9%B4%E5%A4%A7%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h1 id="2015年大前端技术年终总结"><a href="#2015年大前端技术年终总结" class="headerlink" title="2015年大前端技术年终总结"></a>2015年大前端技术年终总结</h1><blockquote>
+<p>数说前端技术，分类回顾点评。</p>
+</blockquote>
+<h2 id="1-前端"><a href="#1-前端" class="headerlink" title="1. 前端"></a>1. 前端</h2><h3 id="1-1-工具"><a href="#1-1-工具" class="headerlink" title="1.1 工具"></a>1.1 工具</h3><h4 id="1-1-1-构建工具"><a href="#1-1-1-构建工具" class="headerlink" title="1.1.1 构建工具"></a>1.1.1 构建工具</h4><ul>
+<li>grunt </li>
+<li>gulp </li>
+<li>webpack </li>
+<li>fis3 </li>
+<li>coolie </li>
+<li>jdf</li>
+</ul>
+<blockquote>
+<p>精彩点评：<br><a id="more"></a></p>
+</blockquote>
+<h4 id="1-1-2-编译工具"><a href="#1-1-2-编译工具" class="headerlink" title="1.1.2 编译工具"></a>1.1.2 编译工具</h4><ul>
+<li>babel </li>
+<li>browserify</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h4 id="1-1-3-包管理工具"><a href="#1-1-3-包管理工具" class="headerlink" title="1.1.3 包管理工具"></a>1.1.3 包管理工具</h4><ul>
+<li>npm </li>
+<li>bower </li>
+<li>component</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-2-前端类库和框架"><a href="#1-2-前端类库和框架" class="headerlink" title="1.2 前端类库和框架"></a>1.2 前端类库和框架</h3><h4 id="1-2-1-类库"><a href="#1-2-1-类库" class="headerlink" title="1.2.1 类库"></a>1.2.1 类库</h4><ul>
+<li>jquery </li>
+<li>zepto </li>
+<li>underscore </li>
+<li>react </li>
+<li>redux/reflux/flux</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h4 id="1-2-2-mvc框架"><a href="#1-2-2-mvc框架" class="headerlink" title="1.2.2 mvc框架"></a>1.2.2 mvc框架</h4><ul>
+<li>angular1.3 </li>
+<li>angular2.0 </li>
+<li>ember2.0</li>
+<li>backbone</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h4 id="1-2-3-mvvm框架"><a href="#1-2-3-mvvm框架" class="headerlink" title="1.2.3 mvvm框架"></a>1.2.3 mvvm框架</h4><ul>
+<li>vuejs</li>
+<li>avalon </li>
+<li>knockout</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h4 id="1-2-4-UI框架"><a href="#1-2-4-UI框架" class="headerlink" title="1.2.4 UI框架"></a>1.2.4 UI框架</h4><ul>
+<li>bootstrap </li>
+<li>senmaticui </li>
+<li>amazeui </li>
+<li>ionic </li>
+<li>framework7 </li>
+<li>materialui</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-3-设计风格"><a href="#1-3-设计风格" class="headerlink" title="1.3 设计风格"></a>1.3 设计风格</h3><ul>
+<li>扁平化 </li>
+<li>3D</li>
+<li>material design</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-4-Js语言相关"><a href="#1-4-Js语言相关" class="headerlink" title="1.4 Js语言相关"></a>1.4 Js语言相关</h3><ul>
+<li>es6 </li>
+<li>es7 </li>
+<li>typescript </li>
+<li>coffeescript</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-5-css预处理器"><a href="#1-5-css预处理器" class="headerlink" title="1.5 css预处理器"></a>1.5 css预处理器</h3><ul>
+<li>less </li>
+<li>sass </li>
+<li>stylus</li>
+<li>postcss</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-6-模块化规范"><a href="#1-6-模块化规范" class="headerlink" title="1.6 模块化规范"></a>1.6 模块化规范</h3><ul>
+<li>amd </li>
+<li>cmd </li>
+<li>commonjs </li>
+<li>umd </li>
+<li>es6 Module</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-7-测试"><a href="#1-7-测试" class="headerlink" title="1.7 测试"></a>1.7 测试</h3><ul>
+<li>mocha </li>
+<li>chai</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-8-响应式方案"><a href="#1-8-响应式方案" class="headerlink" title="1.8 响应式方案"></a>1.8 响应式方案</h3><ul>
+<li>百分比 </li>
+<li>media query</li>
+<li>em和rem </li>
+<li>lib-flexible </li>
+<li>hotcss</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-9-编辑器和IDE"><a href="#1-9-编辑器和IDE" class="headerlink" title="1.9 编辑器和IDE"></a>1.9 编辑器和IDE</h3><ul>
+<li>sublime </li>
+<li>atom</li>
+<li>webstorm</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="1-10-移动开发"><a href="#1-10-移动开发" class="headerlink" title="1.10 移动开发"></a>1.10 移动开发</h3><ul>
+<li>html5 + css3</li>
+<li>react-native</li>
+<li>phonegap </li>
+<li>meteor</li>
+<li>Cordova</li>
+<li>微信开发</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h2 id="2-Node相关"><a href="#2-Node相关" class="headerlink" title="2. Node相关"></a>2. Node相关</h2><h3 id="2-1-框架"><a href="#2-1-框架" class="headerlink" title="2.1 框架"></a>2.1 框架</h3><ul>
+<li>express </li>
+<li>koa </li>
+<li>thinkjs</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+<h3 id="2-2-优秀第三方包"><a href="#2-2-优秀第三方包" class="headerlink" title="2.2 优秀第三方包"></a>2.2 优秀第三方包</h3><h3 id="2-3-数据库"><a href="#2-3-数据库" class="headerlink" title="2.3 数据库"></a>2.3 数据库</h3><ul>
+<li>mongodb </li>
+<li>mysql </li>
+<li>redis </li>
+<li>postgresql </li>
+<li>redis </li>
+<li>oracle</li>
+</ul>
+<blockquote>
+<p>精彩点评：</p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Generator 函数的含义与用法]]></title>
       <url>http://pengfei6.github.io/2015/06/08/Generator%20%E5%87%BD%E6%95%B0%E7%9A%84%E5%90%AB%E4%B9%89%E4%B8%8E%E7%94%A8%E6%B3%95/</url>
       <content type="html"><![CDATA[<p>转载自<a href="http://www.ruanyifeng.com/blog/2015/04/generator.html" target="_blank" rel="external">阮一峰博客</a></p>
@@ -869,6 +1033,288 @@ function unsetCookie(name) {
 <h3 id="Generator-函数的用法"><a href="#Generator-函数的用法" class="headerlink" title="Generator 函数的用法"></a>Generator 函数的用法</h3><p>下面看看如何使用 Generator 函数，执行一个真实的异步任务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fetch = require(&apos;node-fetch&apos;);</div><div class="line">function* gen()&#123;</div><div class="line">  var url = &apos;https://api.github.com/users/github&apos;;</div><div class="line">  var result = yield fetch(url);</div><div class="line">  console.log(result.bio);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>上面代码中，Generator 函数封装了一个异步操作，该操作先读取一个远程接口，然后从 JSON 格式的数据解析信息。就像前面说过的，这段代码非常像同步操作，除了加上了 yield 命令。<br>执行这段代码的方法如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var g = gen();</div><div class="line">var result = g.next();</div><div class="line">result.value.then(function(data)&#123;</div><div class="line">  return data.json();</div><div class="line">&#125;).then(function(data)&#123;</div><div class="line">  g.next(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <p>上面代码中，首先执行 Generator 函数，获取遍历器对象，然后使用 next 方法（第二行），执行异步任务的第一阶段。由于 Fetch 模块返回的是一个 Promise 对象，因此要用 then 方法调用下一个next 方法。<br>可以看到，虽然 Generator 函数将异步操作表示得很简洁，但是流程管理却不方便（即何时执行第一阶段、何时执行第二阶段）。本系列的后面部分，就将介绍如何自动化异步任务的流程管理。<br>另外，本文对 Generator 函数的介绍很简单，详尽的教程请阅读我写的<a href="http://es6.ruanyifeng.com/#README" target="_blank" rel="external">《ECMAScript 6入门》</a>。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[面向对象和数组]]></title>
+      <url>http://pengfei6.github.io/2014/11/20/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84/</url>
+      <content type="html"><![CDATA[<h1 id="面-向-对-象-和-数-组"><a href="#面-向-对-象-和-数-组" class="headerlink" title="面 向 对 象 和 数 组"></a>面 向 对 象 和 数 组</h1><h2 id="1-对象"><a href="#1-对象" class="headerlink" title="1 对象"></a>1 对象</h2><h3 id="1-1-初识对象"><a href="#1-1-初识对象" class="headerlink" title="1.1 初识对象"></a>1.1 初识对象</h3><p>对象在JavaScript中是对数据类型的笼统的称呼，对象本身也是一种数据类型，在基础课程中讲了单一的值类型，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var n = 0;	//number类型</div><div class="line">var b = true;	//boolean类型</div><div class="line">var str = &apos;abc&apos;;	//string类型</div></pre></td></tr></table></figure>
+<p>在Javasript中，一共有五种基本的数据类型（null，undefined，string，boolean，number），由于这几种简单的数据类型是按值传递，故而也可以称之为值类型数据。这类数据类型有一个共同的特点，就是它们都表示的是一个值。就是一个数据只表示了一个值，它对应的变量也是只保存了这一个值。就是说i=3这个表达式中，3就是一个单一的数，那么i也只保存了3这么一个值。<br><a id="more"></a></p>
+<blockquote>
+<p>注：null和undefined其实属性标识性的数据，归到值类型或对象类型都不是很准确。</p>
+</blockquote>
+<h3 id="1-2-数据发展"><a href="#1-2-数据发展" class="headerlink" title="1.2 数据发展"></a>1.2 数据发展</h3><p>但随着数据的复杂程度提高，单一的值类型已不能满足编程的需要，便产生了用单一的值类型数据（或复合数据）去描述的复合型数据，这个复合数据就是对象类型数据。为了方便工作，方便编程，有了复合型的数据类型，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">     name:&apos;rose&apos;,</div><div class="line">     age:22,</div><div class="line">     height:180,</div><div class="line">     write:function()&#123; console.log(&apos;i can program&apos;)&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>以上定义了一个简单的复合数据类型的变量，这个变量以键值对的方式来存储数据，由于复合数据类型是按引用传递的，也可以称之为引用类型（Object，Array，Date，RegExp，Function）。而ECMA-262使用专业术语词汇将对象定义为“无序属性的集合，其属性可以包含基本值、对象或者函数”，即通过键值对来描述对象的属性和方法。</p>
+<p>可以知道，对象就是一种数据结构，用于将多种数据或功能（或叫函数或方法）组织在一起。其实对象类型的数据的意义不仅仅是把多个值组织在一起，更重要的这些集合在一起的值之间还有关联，并且这些值也是对这个对象数据的整体描述，即用数据来描述数据。<br>当然，也可以把obj看做是一个内存块，在内存块中又划分了若干个小内存块，用来存放obj的值，这种数据的存储方式也是需要注意理解的。</p>
+<h3 id="1-3-对象的特点"><a href="#1-3-对象的特点" class="headerlink" title="1.3  对象的特点"></a>1.3  对象的特点</h3><ul>
+<li>可以复合存值，存很多值；</li>
+<li>键和值对本身是对obj的描述，这些不仅仅是数据了，是描述了obj这个完整的对象的特征；</li>
+<li>不同的属性之间也是有关系的，有关联的。如：数组的length属性，数组也是对象类型的，用来描述属性的存值个数。属性之间也是有关联的。</li>
+</ul>
+<p>以上是面向对象编程的特点，在编程语言中，我们经常用对象的这种特点，来描述一个复合的完整数据，即通过数据来描述数据，这就是面向对象的基础，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var web_engineer = &#123;</div><div class="line">	name:&apos;&apos;,</div><div class="line">	age:30,</div><div class="line">	js:function()&#123; console.log(&apos;javascript&apos;)&#125;,</div><div class="line">	css:function()&#123; console.log(&apos;css&apos;)&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="1-4-遍历对象"><a href="#1-4-遍历对象" class="headerlink" title="1.4  遍历对象"></a>1.4  遍历对象</h3><p>遍历对象的值，用for…in：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var attr in web_engineer)&#123;</div><div class="line">	alert(attr);	//获取属性</div><div class="line">	alert(web_engineer[attr]);	//获取值</div><div class="line">	alert(web_engineer.attr);	//获取值的另一方式，性能好，但不够灵活</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样就可以依次按顺序的输出属性及对应的属性值，这种以字符形式的对象遍历输出是没有兼容性问题的。需要注意的是，有一种情况会有兼容性问题—-以数字为属性，这种情况在chrome浏览器中遍历时会将属性为数字的值优先输出。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var person1 = &#123;</div><div class="line">	name:&apos;somebody&apos;,</div><div class="line">	age:22,</div><div class="line">	0:&apos;number1&apos;,</div><div class="line">	1:&apos;number2&apos;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>注意，这里的person1[0]不是数组值，它是一种类似于数组的对象结构，称为类数组，在后面会详细的说到。</p>
+<h2 id="2-面向对象"><a href="#2-面向对象" class="headerlink" title="2 面向对象"></a>2 面向对象</h2><p>加：什么是对象和面向对象，我们用社会生产中商品（物品）和生成商品的方式来解释<br>注：这里的模式，就是指生产方式，创建对象的方式，上课的时候，一定要理解好这个“模式”的概念。这里说的这些设计模式，叫“创建型设计模式”，是诸多的设计模式中的一种</p>
+<h3 id="2-1-创建单一的一个对象"><a href="#2-1-创建单一的一个对象" class="headerlink" title="2.1 创建单一的一个对象"></a>2.1 创建单一的一个对象</h3><p> 在前端发展早期，公司若需要招聘前端工程师的话，需要对招聘的人才特点进行相应的描述，这时我们可以创建一个obj对象来描述前端工程师的特点，这种描述对象的方式就是对象直接量创建对象。一般地，当数据量比较小的时候，适合用对象直接量创建对象。但麻烦的是，如果需要招聘一万个前端人才，则每招聘一次就需要创建一个对象来描述一次，这样效率就不高了。<br>更形象地说，在5000年前，如果需要做一件虎皮大衣，那么首先需要先打个老虎取得虎皮作为原材料，再纯手工缝制，才能制作出一件纯正的虎皮大衣成品。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//对象，物件，产品</div><div class="line">//虎皮大衣</div><div class="line">var shirt = &#123;</div><div class="line">	//手工，基于对象的方式</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>小结：显然，这种生产方式是很落后的。相应的，在js中创建对象数据类型也是这样的，纯粹的用对象直接量来单次的描述对象在编程中非常的不方便，需要改进这种创建对象数据类型的方式，工厂模式可以提高这种落后的“生产方式” 。<br>加：一个对象的设计模式，单例模式的作用</p>
+<h3 id="2-2-批量生产对象的方式：工厂模式"><a href="#2-2-批量生产对象的方式：工厂模式" class="headerlink" title="2.2 批量生产对象的方式：工厂模式"></a>2.2 批量生产对象的方式：工厂模式</h3></blockquote>
+<p>我们知道，一个面包工厂生产面包的流程和我们自己在家做面包的流程是一样的，在家手工制作面包的生产方式就是基于对象。不同的是，工厂里面将生产面包的流程进行了改进，可以批量地生产了。而工厂是对生产对象的流程的归纳，或者叫做封装，这是面向对象。所以原来叫基于对象，现在是面向对象。</p>
+<p>面向对象和基于对象的区别：生产流程的升级，生产方式的改变。面向对象的就是生产对象（对象是物件或是产品）的方式改进了。同样地，在程序语言设计中，面向对象是一种更高效的生产数据的方式。</p>
+<p>回到前面的例子，现在社会上需要很多前端工程师了，需要批量的招聘，需求量很大，但前端工程师人才数量不足，这就需要一个培养前端工程师的流程了，需要培训机构批量的培训出前端工程师：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function FE()&#123;//定义一个前端工程师的规范</div><div class="line">   var obj = &#123;&#125;;//这个注释会引起误解，去掉：生产原料</div><div class="line">   obj.name = &apos;&apos;;	//加工过程</div><div class="line">   obj.age = &apos;&apos;;</div><div class="line">   obj.writeCss = function()&#123; console.log(&apos;css&apos;)&#125;;</div><div class="line">   obj.writeJs = function()&#123; console.log(&apos;js&apos;)&#125;;</div><div class="line">   return obj;	//生产出来的产品</div><div class="line">&#125;</div><div class="line">var a = [];</div><div class="line">for(var i = 0;i&lt;30;i++)&#123;</div><div class="line">	a.push(FE(i));//按着这个规范，用循环批量创建</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>现在定义了一个培养前端工程师的方法，将方法循环30次，就表示生产出30个前端工程师了，这就是典型的通过工厂模式来创建对象。将这种具体的生产方式抽象出一个生产的流程方法，比如现在有很多羊毛，需要批量生产出很多羊毛衫：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function factory(material)&#123;//定义一个生产的流程（或叫规范也行）</div><div class="line">	var obj = &#123;&#125;;</div><div class="line">	obj.material = meterial;//原料</div><div class="line">	obj.attr1 = &apos;&apos;;</div><div class="line">	obj.attr2 = &apos;&apos;;</div><div class="line">	obj.fn = function()&#123;&#125;;//比如羊毛衫还有自己的一些功能，则就是函           数型的属性了</div><div class="line">	return obj;//生产完成，出产品，不要忘了返回</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种抽象出的生产对象的方式就是工厂模式，这是一种简单的生产方式，是对原来手工生产羊毛衫的生产方式的改变，原来叫基于对象，现在就是面向对象了。所谓面向对象，就是指生产对象的方式。现在这是其中一种方式。</p>
+<blockquote>
+<p>小结：通过工厂模式，我们就可以大批量的生产物品了，但是有缺点，在商品短缺的年代，批量出来的可以畅销。但是当全世界都在生产，竞争加剧了，产品丰富了之后，就得提高品牌识别，贴牌了，加上商标，来加强竞争力。这就不能用简单的工厂模式了，需要将商品区别开来，提高产品的差异性。产品差异，在编程语言中叫实例识别，其实意思都是一样。产品差异的体现：同样是手机，苹果更贵小米就便宜；同样是汽车，宝马更贵而夏利就便宜。这种产品的差异性可以称之为实例识别。想要解决实例识别的问题则需要使用构造函数模式了。</p>
+</blockquote>
+<h3 id="2-3-有区别的批量生成对象：构造函数"><a href="#2-3-有区别的批量生成对象：构造函数" class="headerlink" title="2.3 有区别的批量生成对象：构造函数"></a>2.3 有区别的批量生成对象：构造函数</h3><p>以很有个性的360公司为模板，我们创建一个构造函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function FE360(name, age)&#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">	this.writeCss = function()&#123;&#125;;</div><div class="line">	this.writeJs = function()&#123;&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>构造函数和工厂模式对比：</p>
+<ul>
+<li>更简单了</li>
+<li>少了对obj对象的定义，不用new Object</li>
+<li>少了return，不需要返回值</li>
+<li>用法也不一样了，有区别，现在不是直接运行了，需要new一个实例，用法如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var person2 = new FE360(&apos;someone&apos;, 24);</div><div class="line">person2.age;</div><div class="line">person2.name;</div><div class="line">person2.writeCss();</div><div class="line">//这样就获得了有个性的360工程师的实例</div></pre></td></tr></table></figure>
+<p>这里的person2不仅仅是一个对象，它还是构造函数FE360的一个实例，是属于类的实例了，FE360也不仅仅是一个普通函数了，而是构造函数了。现在可以继续创建不同的实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var person3 = new FE360(&apos;person3&apos;, 26);</div><div class="line">var person4 = new FE360(&apos;person4&apos;, 34);</div><div class="line">//这样用构造函数的方法就解决了实例的问题</div><div class="line">//Function的特殊性：一个方法是类还是函数，主要在于new的出现</div></pre></td></tr></table></figure>
+<p>当new一个函数的时候，这个函数就是一个类。new的时候，浏览器的操作：</p>
+<ol>
+<li>首先会主动创建一个对象类型的数据，这个数据是当前函数的实例，或者说，以这个函数名为识别符的实例。可以用instanceof来检验一下：<br>alert(person2 instanceof FE360);</li>
+<li>以这个实例为上下文（context，this，当前行为发生的那个主体），再把构造函数当成一个方法来运行，这个方法就是起一个初始化实例的作用</li>
+<li>可以通过实例来使用构造函数的属性和方法了</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function FE360(name, age)&#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">	this.writeCss =function()&#123; alert(&apos;我叫&apos;+this.name+&apos;,我会写css&apos;); &#125;;</div><div class="line">	this.writeJs = function()&#123; alert(&apos;我叫&apos;+this.name+&apos;,我会写js&apos;); &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">person2.writeCss();</div><div class="line">person2.writeJs();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>小结：对象本来是很笼统的概念，现在person2也是对象，但它是当前FE360的实例，这样就可以细分化了，这是对工厂模式的升级，是生产模式的改进，原来生产的都是一样的，现在可以将商品区分开来了。正如社会的发展，对社会角色的区分也越来越细化。</p>
+</blockquote>
+<ul>
+<li>补充1：对象、类和实例的区分</li>
+</ul>
+<p>对象是万事万物，类是对万事万物的细分和区别，实例是类的具体化，再有什么功能或数据类型，再构造函数扩展就行。</p>
+<ul>
+<li>补充2：数据不单单是一个值，数据也有功能</li>
+</ul>
+<p>比如说，人就是一个抽象的值，不仅仅是一个信息的载体，还可以完成很多功能，比如：会上课会捣乱。数据的范围很广，也是一个数据体。Function类型的数据可以完成很多不同的功能。也就是说函数（function）也是数据。</p>
+<p>少一个原型模式（prototype),一定要加上<br>不重复制造轮子的原则：原型模式</p>
+<h3 id="2-4-兼顾以上二者的混合模式"><a href="#2-4-兼顾以上二者的混合模式" class="headerlink" title="2.4 兼顾以上二者的混合模式"></a>2.4 兼顾以上二者的混合模式</h3><blockquote>
+<p>注：这里的模式，就是指生产方式，创建对象的方式。这里说的这些设计模式，叫“创建型设计模式”，是诸多的设计模式中的一种</p>
+</blockquote>
+<p>私有属性和共有属性。每一个实例上都会产生一个自己私有的属性和方法，比如说吃饭每个人都会，这是自己的私有属性，但这个功能是上帝就创造好的，不是后天培养创建的。构造函数模式虽然可以解决实例识别的问题，但本着编程的复用原则，构造函数模式却解决不了复用的问题，因为在构造函数内定义的方法是构造函数的私有属性，构造函数的实例之间无法去共享一个相同的方法。<br>比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">alert(person3.writeCss() == person4.writeCss);</div><div class="line">//这里alert出现的结果是false，说明这两个方法是不一样的。</div></pre></td></tr></table></figure>
+<p>那怎么让不同的实例去共享相同的方法呢，Js的原型机制可以实现，这就是js面向对象的核心点。<br>下面使用创建对象的新模式，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function FE360(name, age)&#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">&#125;</div><div class="line">//类的定义就发生了质的变化</div><div class="line">FE360.prototype.writeJs = function()&#123;</div><div class="line">    alert(&apos;我叫&apos;+this.name+&apos;,我会写js&apos;);</div><div class="line">&#125;;</div><div class="line">FE360.prototype.writeCss = function()&#123;</div><div class="line">     alert(&apos;我叫&apos;+this.name+&apos;,我会写css&apos;);</div><div class="line">&#125;;</div><div class="line">var person3 = new FE360(&apos;person3&apos;, 26);</div><div class="line">var person4 = new FE360(&apos;person4&apos;, 34);</div></pre></td></tr></table></figure>
+<p>现在在原型上定义了需要共享的方法，而且只需要定义一次就可以了，此时在测试一下实例person3和person4调用的方法是否一样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(person3.writeCss() == person4.writeCss);	//弹出结果为true</div></pre></td></tr></table></figure></p>
+<p>这说明person3和person4上的writeCss方法指向的是内存中的同一个地址，那么无论定义多少个实例，实例上用的方法都是一样的了。</p>
+<p>原型是任何方法天生就有的属性，只有将方法当成一个类的时候，原型才有作用，把方法当成一个普通方法来运行的时候，原型也没什么用。现在将以上的例子来分解，演示原型的实现机制，如图1所示：</p>
+<p>图 1 原型的实现机制<br> 创建完对象之后，对象是一个内存地址，没有运行之前，就有一个属性<strong>proto</strong>（这里是两个下划线，任何一个对象实例上都有这个属性），这个属性是天生的原型机制，会指向原型对象。而在person1中定义的name和age是它的私有属性，如果在私有作用域内找不到这两个属性，就会往原型对象逐级往上找。<br>把原型链展开来写，一定要把JS是基于原型继承的这一特点写清楚。尽量配上图。要求有图有真相</p>
+<blockquote>
+<p>总结：<br>加上：什么是模式，可以简单的理解为生成方式，以上解释过了。<br>1、面对对象的概念不是很深，这个思想不难理解，讲数组的时候可以体会到这个编程思想的用法。<br>2、工厂模式什么时候去使用，他的使用场合是在哪里，其实在编程过程中会接触到很多这个模式，比如说createElement，这就是一个典型的工厂方法。<br>3、使用什么样的模式，是按需求来决定。不必生搬硬套的去使用模式，应该自然而然的来使用，完全没有高低优劣之分。比如视频中说的富士康的工厂，他的生产模式就是代工，但是不能说它的生产方式就是低级，因为富士康的定位就是代工生产，生产的效率也很高。模式的使用在于编程的快捷需求，需求决定模式的选择。<br>4、Js不需要处理大批量的数据量，所以js的面向对象是灵活高效的，相对是比较瘦小的。但是由于js没有这种大数据量的特点，js就在浏览器中执行，标签较少，数据量较小。一切都是为灵活高效而服务的。比如说打一个蚊子，不需要飞机大炮，一个苍蝇拍就够了，这就是需求决定的。编程中使用标签多的时候也不会超过几千个，一个循环就可以了，所以没有必要过多的去强调面向对象。</p>
+</blockquote>
+<h2 id="3-数组基础"><a href="#3-数组基础" class="headerlink" title="3 数组基础"></a>3 数组基础</h2><h3 id="3-1-数组定义"><a href="#3-1-数组定义" class="headerlink" title="3.1 数组定义"></a>3.1 数组定义</h3><p>创建一个数组最简单的方式是数组直接量的方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [0,1,2,3,4,5,6,7,8];</div><div class="line">console.log(arr1);	//5,6,7,8,9</div></pre></td></tr></table></figure></p>
+<p>也可以用构造函数的方式来创建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr=new Array(元素1，元素2….元素n)</div></pre></td></tr></table></figure></p>
+<h3 id="3-2-数组方法"><a href="#3-2-数组方法" class="headerlink" title="3.2 数组方法"></a>3.2 数组方法</h3><p>数组有很多内置的强大方法，简单回顾一下：</p>
+<h4 id="3-2-1-元素添加和删除"><a href="#3-2-1-元素添加和删除" class="headerlink" title="3.2.1 元素添加和删除"></a>3.2.1 元素添加和删除</h4><p>a) push()<br>该方法可向数组的末尾添加一个或是多个元素，并返回新的数组长度。可以这么来理解，push是对数据的压栈操作，栈不是什么很深的概念，不要被吓倒了，比如说，桌子上堆了厚厚的一摞书，压栈就是把书一本本的往上加，是不是很好理解。使用语法：arr.push(ele1，ele2…eleN)；其中，第一个参数是必填的，指要添加到数组的第一个元素，后面的参数可选，在使用过程中也一般只传第一个参数，在做遍历即可。<br>b) unshift()<br>该方法可向数组的开头添加一个或多个元素，并返回新的长度。它的作用不要和push方法混淆，一个是从数组的开头进行元素添加，一个是从数组的末尾进行元素的添加。使用语法：arr.unshift(ele1，ele2…eleN);<br>c) concat()<br>该方法用于连接两个或是多个数组，注意的是，该方法不会改变现有的数组，只是会返回一个被连接后的数组。使用语法：arr.concat(arr1，arr2…arrN);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [0,1,2,3,4,5,6,7,8];</div><div class="line">var arr2 = arr.concat([1,2,3], [22,33,44]);</div><div class="line">console.log(arr2);	//0,1,2,3,4,5,6,7,8,1,2,3,22,33,44</div></pre></td></tr></table></figure></p>
+<p>d) pop()<br>该方法和push方法对应，但功能相反，用于删除并返回数组的最后一个元素，同时，数组的长度会被减1。如果数组已经为空，再去执行pop()方法，那么此时会返回undefined值。使用语法：arr.pop()，注意括号内不可传参数。<br>e) shift()<br>该方法和unshift方法对应，但功能相反，用于删除并返回数组的第一个元素。使用语法：arr.shift();</p>
+<h4 id="3-2-2-slice和splice方法"><a href="#3-2-2-slice和splice方法" class="headerlink" title="3.2.2 slice和splice方法"></a>3.2.2 slice和splice方法</h4><p>a) slice()<br>该方法可以从已有的数组中返回规定的元素，此方法返回的是一个新数组，包含start到end（注意，不包含该元素）的arrObj数组中的元素。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [0,1,2,3,4,5,6,7,8];</div><div class="line">var arr1 = arr.slice(5, 1);</div><div class="line">console.log(arr1);	//5,6,7,8,9</div></pre></td></tr></table></figure></p>
+<p>使用语法：arr.slice(start, end)，其中参数start必填，它规定了开始选取元素的位置，但如果是负数的话，就是表示从数组的尾部开始算起的位置（-1为最后一个元素，-2为倒数第二个元素…）；参数end是选的，它规定了从何处结束选取，如果不传，则表示从规定的起始位置一直选取到结束，如果是负数，表示从数组的尾部开始算起的元素。在第四部分可以继续探讨slice方法的实现原理。<br>b) splice()<br>该方法功能很强大，可以用于对数组执行添加、删除和插入的功能，然后返回被删除的项目，该方法会改变原始的数组。<br>使用语法：arr.splice(index，count，item1，item2…itemN)；<br>参数说明：index是必填的参数，而且必须是整数，这个参数指定了添加或是删除项目的位置，而且index为负数时，表明可以从数组结尾处规定的位置执行该方法；count也是必填参数，指定要删除的项目数量，如果设置为0，则不删除项目，后面添加参数的话，此时就可实现插入的功能了；item是可选的参数，如果不传，则指向删除的功能，传入的话，可以实现添加和插入的功能<br>具体范例如下：<br>1).    插入功能(只插入)：splice(start, 0, args);//返回的是处理后的数组<br>2).    替换功能（删除和插入）：splice(start, delCount, args);//返回的是处理后的数组<br>3).    删除功能（只删除）：splice(start, delCount);//返回的是被删除的元素数组，若没有删除任何元素，则返回空数组</p>
+<p>在开始了解这几个方法的时候，先普及一个重要的概念，即隐式调用和显式调用。其实这两个概念也很简单，所谓显式调用即是我们在编码的过程中主动的去调用该方法，而隐式调用则是js在处理过程中在进行某些数据类型转换时自动默认的调用该方法。那么为什么在这里提及隐式调用呢，由于toString()和valueOf()等方法属于原型对象都共有的方法，都会在需要的时候隐式的调用，完成相关的数据操作。</p>
+<h4 id="3-2-3-toString方法"><a href="#3-2-3-toString方法" class="headerlink" title="3.2.3 toString方法"></a>3.2.3 toString方法</h4><p>    该方法用于将一个逻辑值转换成字符串，并返回结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var age = 123;</div><div class="line">var str = age.toString();//str结果为”123”</div><div class="line">var b = false;</div><div class="line">var bToString = b.toString();//bToString 结果为”false”</div></pre></td></tr></table></figure></p>
+<p>    数值、布尔值、对象和字符串都有toString方法，但null和undefined值没有这个方法。<br>    toString在大多数情况下不需要传递参数，因为默认情况下该方法都是以十进制的格式返回数值的结果。如果传递参数给toString()的话则可以以二进制、八进制或十六进制表示的相应结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var num = 16;</div><div class="line">console.log(num.toString(2));//10000 二进制</div><div class="line">console.log(num.toString(8));//20 八进制</div><div class="line">console.log(num.toString(16));//10 十六进制</div><div class="line">console.log(num.toString(5));//31 虽然没有五进制，但是这样传参是可以被toString()方法接受的</div></pre></td></tr></table></figure></p>
+<p>    没有重新定义toString方法，看看调用toString方法将Object类型转化成string类型是什么样的结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;name:&quot;Tom&quot;, age:18&#125;;</div><div class="line">console.log(obj.toString());//&quot;[object Object]&quot;</div><div class="line">//此时调用的是从Object继承来的原始的toString()方法</div></pre></td></tr></table></figure></p>
+<p>    toString方法的妙用—判断数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Object.prototype.toString.call(null);//”[object Null]”</div><div class="line">Object.prototype.toString.call(undefined);//”[object Undefined]”</div><div class="line">Object.prototype.toString.call(“abc”);//”[object String]”</div><div class="line">Object.prototype.toString.call(123);//”[object Number]”</div><div class="line">Object.prototype.toString.call(true);//”[object Boolean]”</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;console.log(“test”);&#125;//函数类型</div><div class="line">Object.prototype.toString.call(fn);//”[object Function]”</div><div class="line">var arr = [1,2,3];//数组类型</div><div class="line">Object.prototype.toString.call(arr);//”[object Array]”</div></pre></td></tr></table></figure>
+<h4 id="3-2-4-排序方法"><a href="#3-2-4-排序方法" class="headerlink" title="3.2.4 排序方法"></a>3.2.4 排序方法</h4><p>a) reverse()<br>该方法是用于颠倒数组中元素的顺序，需要注意的是，该方法直接在原数组上进行操作，会改变原数组，而不会创建一个新的数组，并且，使用时不需要传参，如：arr.reverse()。<br>b) sort()<br>该方法用于对数组的元素进行排序，和reverse方法类似，该方法也是直接在原数组上进行排序，会改变原数组。在这里，需要对该方法中的传参好好说明，调用该方法但不传参时，如arr.sort()，此时该方法将按ASCII码的字母顺序对数组中的元素进行排序，这是封装方法时这样设计的，使用时尤其应该注意。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr = [2,3,4,6,d,e,t,6];</div><div class="line">arr.sort();</div><div class="line">console.log(arr);</div></pre></td></tr></table></figure></p>
+<p>如果需要按其他的标准进行排序时，可以将函数直接量作为该方法的传参，从而实现排序，如以下写法可以实现升序排序（对DOM元素排序，对对象的排序，用的排序的算法是插入排序的思）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var aNum = [33,22,67,3,543];</div><div class="line">aNum.sort(function(a, b)&#123;</div><div class="line">	console.log(aNum);</div><div class="line">	return a-b;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>带单位增序降序的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var aNum = [&apos;33px&apos;,&apos;22px&apos;,&apos;67px&apos;,&apos;3px&apos;,&apos;543px&apos;];</div><div class="line">aNum.sort(function(a, b)&#123;</div><div class="line">	console.log(aNum);</div><div class="line">	return parseInt(a) - parseInt(b);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h4 id="3-2-5-数组转换"><a href="#3-2-5-数组转换" class="headerlink" title="3.2.5 数组转换"></a>3.2.5 数组转换</h4><p>a) toLocaleString()<br>toLocaleString()方法用于将数组转换为本地字符串，作用和toString差不多，但此方法是使用地区特定的分隔符来将生成的字符串连接起来。<br>b) valueOf()<br>该方法可以返回Array对象的原数值，通常都是在后台隐式的调用该方法，一般不会显式的出现我们的代码中。<br>c) join()<br>该方法用于将一个数组的所有元素都按指定的分隔符分隔，转换成字符串。<br>d) split()<br>该方法用于将字符串按片段分隔创建数组，和join()的功能正好相反。</p>
+<h4 id="3-2-6-位置方法（ECMA5的方法）"><a href="#3-2-6-位置方法（ECMA5的方法）" class="headerlink" title="3.2.6 位置方法（ECMA5的方法）"></a>3.2.6 位置方法（ECMA5的方法）</h4><p>位置方法包括indexOf()和lastIndexOf()这两个方法用于搜索整个数组中具有给定值的元素，并且返回找到的第一个元素的索引值，如果没有找到，则返回-1。两者不同的是，indexOf方法是从头至尾的搜索，而lastIndexOf是从尾向前的搜索。<br>参数说明：indexOf()和lastIndexOf()方法的第一个参数都是必需的，传入的是需要搜索的目标值，而第二个参数是可选的，即指定开始搜索的位置，如果不传的话，indexOf()方法默认从头开始搜索，lastIndexOf方法默认从尾开始搜索。重要的是，第二个参数可以是一个负值，表示相对数组末尾的偏移量，所以这也使得以上两方法的使用没有特别明确的界限。</p>
+<h4 id="3-2-7-迭代方法（ECMA5的方法）"><a href="#3-2-7-迭代方法（ECMA5的方法）" class="headerlink" title="3.2.7 迭代方法（ECMA5的方法）"></a>3.2.7 迭代方法（ECMA5的方法）</h4><p>在学习理解这五个迭代方法之前，我们来先模拟一下forEach()这个方法的实现，以便理解这些方法中用到的传参（这几个方法的形式参数都是一样的），这对后续学习很有帮忙，我们需要从根处模拟这些方法是用什么样的思路来封装的，好了，请看代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">Array.prototype.forEach=function(fun,context)&#123;</div><div class="line">	// forEach的实现原理</div><div class="line">	var len=this.length;</div><div class="line">	var context=arguments[1];//即使为undefined，call函数也正常运行。</div><div class="line">	if(typeof fun !==&quot;function&quot;)&#123;</div><div class="line">		throw &quot;输入正确函数!&quot;;</div><div class="line">	&#125;</div><div class="line">	for(var i=0;i&lt;len;i++)&#123;</div><div class="line">		fun.call(context,this[i],i,this);</div><div class="line">//注意这四个参数，很关键，context是上下文，即作用对象，this[i]是各项元素的值，i为各项的索引值，this为执行该方法的主体</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">arr.forEach(function(item,index,arr)&#123;</div><div class="line">	console.log(item,index,arr);</div><div class="line">	//item	   	arr的每一项的内容</div><div class="line">	//index	 各项的索引值</div><div class="line">	//arr	 	即是输入的原数组值</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>代码解析：审查以上代码，这是用原型的方法来模拟forEach的实现，forEach()方法中有两个传参，第一个fun（传入一个函数），第二个是context（上下文，可以理解为执行该方法的对象）。一般在使用过程中传入fun即可，在fun中自定义自己想要实现的功能。在fun中有三个传参，在代码中写的很清楚，请理解之。<br>a) every()<br>该方法对数组中的每一项都运行给定的函数直接量，如果该函数对每一项都返回true，则该方法返回true，注意是每一项都满足条件该方法才会返回true。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr=[1,2,3,4,5,6,7];</div><div class="line">var result=arr.every(function (item, index, array)&#123; return item&gt;5; &#125;);</div><div class="line">alert(result);	//此时会返回的结果是 false;</div><div class="line">var arr1=[3,4,5];</div><div class="line">var result1=arr1.every(function (item, index, array)&#123; return item&gt;2; &#125;);</div><div class="line">alert(result1);	//此时会返回的结果是 true;</div></pre></td></tr></table></figure></p>
+<p>b) filter()<br>该方法对数组中的每一项都运行给定函数，返回该函数返回true的项组成的数组，从单词字面意思理解，该方法是对数据执行一个过滤的作用，满足条件的返回，不满足条件的丢弃，仅此而已，用个例子说明：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr=[1,2,3,4,5,6,7];</div><div class="line">var result=arr.filter(function (item, index, array)&#123; return item&gt;5; &#125;);</div><div class="line">alert(result);	//此时会返回的结果是 [6,7];</div></pre></td></tr></table></figure></p>
+<p>c) forEach<br>对数组中的每一项运行给定函数，需要注意的是，这个方法没有返回值。在编码的过程中使用这个方法会带来很多便利，因为该方法就有一个遍历数组元素的作用，不用每次的写一个for循环来获取数组的每一项进行操作了。<br>d) map()<br>对数组中的每一项运行给定的函数，返回每次函数调用的结果组成的数组，注意哦，这里返回的可是数组，和some()等方法返回布尔值不一样，使用过程中需要区别。<br>e) some()<br>对数组中的每一项运行给定的函数，如果该函数对任一项都返回true，则该方法返回true，和every()方法有点相似，但是要区别啊亲，简单区别的话可以从单词下手，every()是传入的函数需要对每一项都需要满足条件，该方法次啊会返回true；而some()方法是只要传入的函数对数组中的某一项返回true，该方法就会返回true。</p>
+<h4 id="3-2-8-缩小方法"><a href="#3-2-8-缩小方法" class="headerlink" title="3.2.8 缩小方法"></a>3.2.8 缩小方法</h4><p>a) reduce()<br>该方法从数组的第一项开始逐个遍历至尾，使用指定的函数来将数组的元素进行整合，只生成单个的值，这就是缩小方法，很好理解吧。另外，需要对该方法的参数进行说明一下，reduce()需要两个参数，第一个参数是执行化简操作的函数，这个参数必需；第二个参数是一个传递给函数的初试值，这里需要理解一下，所谓初始值就是传给第一个函数参数执行操作的第一个值，在接下来的操作中，这个值就是上一次函数的返回值了，而当第二个传参不使用时，化简函数就使用数组的第一个元素和第二个元素作为其第一个和第二个参数进行计算。请结合以下代码理解：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr=[1,2,3,4,4,5,6,6];</div><div class="line">var sum=arr.reduce(function (x, y)&#123; return x+y; &#125;, 0);	//数组元素求和</div><div class="line">var multi=arr.reduce(function (x, y)&#123; return x*y&#125;, 1);	//求出数组中各元素的积</div><div class="line">var max=arr.reduce(function (x, y)&#123; return (x&gt;y)?x:y&#125;);	//求出最大值为6</div></pre></td></tr></table></figure></p>
+<p>b) reduceRight()<br>该方法的使用和reduce()是一样的，这里可以联想到indexOf()方法和lastIndexOf()方法的关系，即reduceRight()方法是按照数组索引从高到低的处理数组。</p>
+<h2 id="4-数组和面向对象"><a href="#4-数组和面向对象" class="headerlink" title="4 数组和面向对象"></a>4 数组和面向对象</h2><h3 id="4-1数组和对象的关系"><a href="#4-1数组和对象的关系" class="headerlink" title="4.1数组和对象的关系"></a>4.1数组和对象的关系</h3><p>数组也是对象：使用typeof对一个数组运算后会返回的是字符串“object”，这便足以说明数组就是对象。</p>
+<p>数组是有序存储数据的集合：数组是一段线性分配的内存，它可以通过整数去计算偏移并访问其中的元素，由此可以看出数组是有序对象存储的集合。</p>
+<p>数组是一种访问速度很快的数据结构：因为数组的属性都是以数字形式存放在栈中，从栈中获取数据是非常快捷的。</p>
+<p>类数组对象：而由于JavaScript中没有数组这样的数据结构，但却提供了一种拥有一些类数组特性的对象，将数组的下标转变成字符串，将其作为属性，这种我们称之为类数组对象。虽然类数组对象的访问速度比真正的数组慢，但它使用起来却更加的灵活方便，且其属性的检索和更新方式和对象都是一模一样的。</p>
+<h3 id="4-2数组的前世今生"><a href="#4-2数组的前世今生" class="headerlink" title="4.2数组的前世今生"></a>4.2数组的前世今生</h3><p>Js中的Object是原始的类，负责构造对象，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Var obj=  &#123;name: ‘’,age:22, height:199 &#125;;</div></pre></td></tr></table></figure>
+<p>但由于方法不足，提供了一套封装数据的基本模型，由于功能有限需要更改和改进，有了以下的关联数组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Obj[‘name’];	//php中叫做关联数组，可以以字符串为索引，作为查找值的依据</div><div class="line">Obj[‘age’];</div></pre></td></tr></table></figure>
+<p>Js是很小巧的语言，数组和对象都是轻量级的。把对象里面的一部分功能做了改进，把数字也可以作为属性，索引，这样改进的好处：数字可以进行简单的数学运算，这样就派生出了数组类—-Array类。<br>数组只能以数字为索引属性的对象，创建这个类的时候，在它的原型上定义了一些属性和方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = [‘1’, ‘2’, ‘3’];</div><div class="line">length属性；//Array.prototype.length</div><div class="line">splice方法；</div><div class="line">sort方法等,我们也可以定义出这些方法</div></pre></td></tr></table></figure>
+<p>把这些方法定义在原型上，把0,1,2这些属性自定义在类上，这样就不用写属性，可以直接写值了。对象是非常简便苗条的描述数据类型，数组就是这样演变过来的，而且在对象的基础了加了一些功能而产生的，Array继承又丰富了Object类。</p>
+<h3 id="4-3-对象和数组的同源性"><a href="#4-3-对象和数组的同源性" class="headerlink" title="4.3 对象和数组的同源性"></a>4.3 对象和数组的同源性</h3><p>我们可以在一对方括号中包围零个或多个用逗号分隔的值来方便的创建新数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var empty=[];</div><div class="line">var num=[0,  1,  21.2, true, false, ‘string’, null, undefined, [‘another’, ‘array’], &#123;object: true&#125;, NaN, Infinity ];</div><div class="line">empty.length == 0;//true,数组empty的长度为0;</div><div class="line">num.length == 12; //true,数组num的长度为12，且数组中允许包好任意混合类型的值。</div></pre></td></tr></table></figure>
+<p>在数组num中，数组的第一个值将自动获得属性名‘0’， 第二个值将获得属性名‘1’，依次类推，可以很直观的看到数组有序存储数据的特性。同样的，我们来看使用对象直接量来创建一个保存一样数据的对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var num_obj=&#123;</div><div class="line">    ‘0’:0,</div><div class="line">    ‘1’:1,</div><div class="line">    ‘2’:21.2,</div><div class="line">    ‘3’:true,</div><div class="line">    ‘4’:false,</div><div class="line">    ‘5’:’string’,</div><div class="line">    ‘6’:null,</div><div class="line">    ‘7’:undefined,</div><div class="line">    ‘8’:[‘another’, ‘array’],</div><div class="line">    ‘9’:&#123;object:true&#125;,</div><div class="line">    ‘10’:NaN,</div><div class="line">    ‘11’:Infinity</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这样我们就用对象直接量的方式保存了和数组num一样的数据，不同的是，我们需要指定每一项数据的相应属性名，才可以实现相同的目的。这是因为num继承自Array.prototype，而num_obj继承自Object.prototype，所以num可以有序存储数据而且还具有length（当然后面会接触到function也有length属性，而function也是对象，所以不能说只有数组有length而对象就没有length，这是不对的）。</p>
+<h3 id="4-4检测数组类型"><a href="#4-4检测数组类型" class="headerlink" title="4.4检测数组类型"></a>4.4检测数组类型</h3><p>由于以上所讲述到的数组和对象的同源性，所以在JavaScript中对对象和数组的区别经常是混乱的，在对数组和对象的使用上也经常不明确，所以有必要明确两个误区：</p>
+<ul>
+<li>不要在必须使用数组时使用对象，或者在必须使用对象时使用了数组<br>选用数组或对象的规则：当属性名是小而连续的整数时，应该使用数组，或是当对属性的位置和排列顺序有特殊要求时，应该使用数组；否则，应该使用对象。</li>
+<li>正确区分对象和数组<br>不能单纯的运用typeof来检测数组，这会出现‘object’，通过数组去重来正确理解：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//数组内单一数据类型去重复</div><div class="line">var a=[88,88,44,33,27,44,88,20,27,67,22,27,27];</div><div class="line">//var a=[2,2,2,2,2,2,2,2,2,2,2,2,2]</div><div class="line">Array.prototype.distinct=function ()&#123;//在Array原型上拓展去重方法</div><div class="line">	var a=this;</div><div class="line">	for(var j=0;j&lt;a.length-1;j++)&#123;//使用简单的双循环逐个比较</div><div class="line">		var item=a[j];//将待比较的数提出来</div><div class="line">		for(var i=j+1;i&lt;a.length;)&#123;</div><div class="line">			if(item===a[i])&#123;//待比较数与数组中其他数做比较</div><div class="line">				a.splice(i,1);	//两数相等，则删除相应项		</div><div class="line">			&#125;else&#123;</div><div class="line">				i++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">alert(a.distinct());</div><div class="line">alert(a);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这是简单的数组去重复，数组中没有包括对象类型数，都是简单的数值去重，在if逻辑表达式中会隐式的调用typeof运算符来判断数据类型。但是在数组中包含对象类型的值时，此时去重便不能实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var a=[88,88,&#123;&#125;,&#123;&#125;,&#123;&#125;,33,27,44,88,20,27,67,22,27,27];</div><div class="line">Array.prototype.distinct=function ()&#123;</div><div class="line">	var a=this;</div><div class="line">	var obj=&#123;&#125;;//把数组里的每个值，转变为这个对象属性和值。如果当前的这个值，没有出现重复</div><div class="line">	for(var i=0;i&lt;a.length;)&#123;</div><div class="line">		if(obj[a[i]]!=a[i])&#123;</div><div class="line">			//第一次是obj[88] !=88 obj[88]是undefined</div><div class="line">			//如果不等则是true，则给obj构建一个属性和值相同的键值对。说明它原来没有出现过，现在出现了则将其转化为对象的属性</div><div class="line">			//第二 obj[88]已经存在了</div><div class="line">			obj[a[i]]=a[i];//说明没有重复项</div><div class="line">			i++;</div><div class="line">		&#125;else&#123;</div><div class="line">			a.splice(i,1);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">alert(a.distinct());</div><div class="line">alert(a);</div></pre></td></tr></table></figure></p>
+<p>想知道去重后alert(a)的结果吗？</p>
+<blockquote>
+<p>小结：原来使用的typeof运算符对数组的检测是不严谨的，所以在数组中含有对象类型值时进行去重不能实现。但是，我们可以自定义一个方法来实现对数组和对象的判断。既然前面咱们已经学习了原型等知识，就可以自定义一个更加简洁的方法来检测数组类型了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var is_Array=function(value)&#123;</div><div class="line">	return Object.prototype.toString.apply(value) === &apos;[object Array]&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>补充：call和apply的应用和区别<br>A) call 和apply方法具有相同的功能，都可以直接改变被执行函数的作用域指向传参指定的新对象，即更改被执行函数的内部指针this的指向。这在面向对象的js编程过程中有时是很有用的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function fn()&#123;</div><div class="line">alert(this.x + this.y);</div><div class="line">&#125;</div><div class="line">var obj = &#123;x: 2, y: 1&#125;;</div><div class="line">fn.call(obj);	//弹出的结果为3</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>B) 两者的区别：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Fn.call(context, arg1, arg2, arg3.....);//call方法中第二个以后的传参不限个数</div><div class="line">Fn.apply(context, arg[i]);		//apply方法第二个参数必须为数组，数组中为需要传递的参数</div></pre></td></tr></table></figure></p>
+<h3 id="4-3数组方法模拟与扩展-深入理解prototype"><a href="#4-3数组方法模拟与扩展-深入理解prototype" class="headerlink" title="4.3数组方法模拟与扩展(深入理解prototype)"></a>4.3数组方法模拟与扩展(深入理解prototype)</h3><p>此讲主要是讲数组的原理性的东西<br>面向对象就是用来封装数据的，数组类就是典型的面向对象的类。一个是对数据的封装，归纳分类；另外一个是逻辑关系的分类，就是函数方法。以下分解几个方法，进一步探究Array上方法的由来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//复制数组里的第s到第e项之前，不影响原来的实例</div><div class="line">Array.prototype.slice = function(s, e)&#123;</div><div class="line">	var arr = [];</div><div class="line">	e = (typeof e == &apos;number&apos;)?e:this.length;</div><div class="line">	for(var i=s;i&lt;e;i++)&#123;</div><div class="line">		arr.push(this[i]);</div><div class="line">	&#125;</div><div class="line">	return arr;</div><div class="line">&#125;;</div><div class="line">var arr = [0,1,2,3,4,5,6,7,8];</div><div class="line">arr.slice();</div></pre></td></tr></table></figure>
+<h4 id="4-3-1-数组去重复的实现"><a href="#4-3-1-数组去重复的实现" class="headerlink" title="4.3.1 数组去重复的实现"></a>4.3.1 数组去重复的实现</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div></pre></td><td class="code"><pre><div class="line">/*------------------------</div><div class="line"> *函数名称：Array.prototype.distinct</div><div class="line"> *功能描述：牺牲空间换时间，利用自定义属性的方法去重</div><div class="line"> *思    路：</div><div class="line"> *-----------------------*/</div><div class="line">Array.prototype.distinct=function ()&#123;</div><div class="line">	var obj=&#123;&#125;;//定义一个对象，用于存放数组中不重复的元素</div><div class="line">	for(var i=0;i&lt;this.length;)&#123;//遍历数组中的元素</div><div class="line">		if(obj[this[i]]!=this[i])&#123;//若obj对象中没有该属性值，则向obj中添加一个属性并设置对应属性值，属性和属性值均为该数组元素</div><div class="line">			obj[this[i]]=this[i];</div><div class="line">			i++;</div><div class="line">		&#125;else&#123;</div><div class="line">			this.splice(i,1);//如果obj中已经有了该数组元素，则把比较到的这个重复元素删除</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">/*------------------------</div><div class="line"> *函数名称：</div><div class="line"> *功能描述：forEach方法去重</div><div class="line"> *思   路：</div><div class="line"> *-----------------------*/</div><div class="line">Array.prototype.distinct=function ()&#123;</div><div class="line">	var a=[],obj=&#123;&#125;,temp=this;</div><div class="line">	temp.forEach(function (value, index, temp)&#123;</div><div class="line">		if(!obj[typeof (value)+value])	&#123;</div><div class="line">			a.push(value);</div><div class="line">			obj[typeof (value)+value]=true;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">	return a;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">/*------------------------</div><div class="line"> *函数名称：</div><div class="line"> *功能描述：解决对象去重问题</div><div class="line"> *思   路：</div><div class="line"> *-----------------------*/</div><div class="line">function multiTypeDistinct (arr)&#123;</div><div class="line">	//判断对象类型的方法</div><div class="line">	function isEqual(obj1,obj2)&#123;</div><div class="line">		//判断两个对象的地址是否一样，地址一样则必相等，这里只为了优化性能</div><div class="line">		if(obj1===obj2)&#123;</div><div class="line">			return true;</div><div class="line">		&#125;</div><div class="line">		if(typeof(obj1)==&quot;object&quot;&amp;&amp;typeof(obj2)==&quot;object&quot;)&#123;</div><div class="line">			//判断两个对象类型一致且为object类型</div><div class="line">			var count=0;</div><div class="line">			for(var attr in obj1)&#123;</div><div class="line">				count++;</div><div class="line">				if(!isEqual(obj1[attr],obj2[attr]))&#123;</div><div class="line">					return false;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			for(var attr in obj2)&#123;</div><div class="line">				count--;</div><div class="line">			&#125;</div><div class="line">			return count==0;</div><div class="line">		&#125;else if(typeof(obj1)==&quot;function&quot;&amp;&amp;typeof(obj2)==&quot;function&quot;)&#123;</div><div class="line">			//判断两个对象类型一致且为function类型</div><div class="line">			if(obj1.toString()!==obj2.toString())&#123;</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">		&#125;else &#123;	//判断两个对象类型不一致，再判断值是否相等</div><div class="line">			if(obj1!=obj2)&#123;</div><div class="line">				return false;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return true;</div><div class="line">	&#125;;</div><div class="line">	//temp作为传入数组arr的备份，在不改变原数组的基础上进行去重操作</div><div class="line">	var temp=arr.slice(0);</div><div class="line">	for(var i=0;i&lt;temp.length;i++)&#123;</div><div class="line">		for(j=i+1;j&lt;temp.length;j++)&#123;</div><div class="line">			if(isEqual(temp[j],temp[i]))&#123;</div><div class="line">				temp.splice(j,1);//删除该元素</div><div class="line">				j--;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return temp;</div><div class="line">&#125;</div><div class="line">/*------------------------</div><div class="line"> *函数名称：listToArray()</div><div class="line"> *功能描述：将nodeList类型转化为数组</div><div class="line"> *思   路：</div><div class="line"> *-----------------------*/</div><div class="line">function listToArray(eles)&#123;</div><div class="line">	try&#123;</div><div class="line">		return Array.prototype.slice.call(eles,0)</div><div class="line">	&#125;catch(e)&#123;//如果try里的代码出现了异常，则执行catch里的代码</div><div class="line">		var a=[];</div><div class="line">		for(var i=0;i&lt;eles.length;i++)&#123;</div><div class="line">			a.push(eles[i]);</div><div class="line">		&#125;</div><div class="line">		return a;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*------------------------</div><div class="line"> *函数名称：stringDist</div><div class="line"> *功能描述：字符串转换成数组去重</div><div class="line"> *思   路：</div><div class="line"> *-----------------------*/</div><div class="line">var str=&apos;777748908883859999&apos;;</div><div class="line">var arr=[].slice.call(str,0);//将字符串转化为数组</div><div class="line">function stringDist(arr)&#123;</div><div class="line">	var obj=&#123;&#125;,a=[];</div><div class="line">	for(var i=0,len=arr.length;i&lt;len;i++)&#123;</div><div class="line">		var temp=arr[i];		</div><div class="line">		if(!obj.hasOwnProperty(temp))&#123;	//判断obj对象是否具有temp属性</div><div class="line">			obj[temp]=1;</div><div class="line">			a.push(temp);</div><div class="line">		&#125;else&#123;</div><div class="line">			obj[temp]++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return a;</div><div class="line">	//return obj;	//返回每一项及其重复的个数</div><div class="line">&#125;</div><div class="line">console.log(stringDist(arr));</div></pre></td></tr></table></figure>
+<h4 id="4-3-2-数组克隆的实现"><a href="#4-3-2-数组克隆的实现" class="headerlink" title="4.3.2 数组克隆的实现"></a>4.3.2 数组克隆的实现</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">Array.prototype.clone = function()&#123;</div><div class="line">	return this.slice(0);	//利用js内置的方法，执行效率特别高</div><div class="line">&#125;;</div><div class="line">Array.prototype.clone = function()&#123;</div><div class="line">	var a = [];</div><div class="line">	for(var i=0;i&lt;this,length;i++)&#123;</div><div class="line">		a.push(this[i]);</div><div class="line">	&#125;</div><div class="line">	return a;</div><div class="line">&#125;;</div><div class="line">//测试</div><div class="line">var a = [3,44,5,6,66];</div><div class="line">var a1 = a.clone();</div><div class="line">alert(a1 == a);</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git和Github学习--基础篇]]></title>
+      <url>http://pengfei6.github.io/2014/10/10/Git%E5%92%8CGithub%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E7%A1%80%E7%AF%87/</url>
+      <content type="html"><![CDATA[<p>作为新时代的好码农，使用git和github来进行学习和交流是必备技能之一。什么，你都没听过，我擦勒，还能不能愉快的玩耍了。掌握git和github的使用，可以带你装逼带你飞，比如说，可以抄大婶的代码啊，哈哈…(此处省略一万个暗笑)。还可以直接看流行技术的源码和demo啊，再也不用去各大群里弱弱的问：大神，react怎么学啊，大牛，教我nodejs吧…。还有还有，要是你愿意，可以给开源项目贡献代码啊，当然，也可以把自己的牛逼项目开源出来，在这里和大家分享。另外，大婶什么的，都在这里活动，咱也来混个脸熟，从此走向高大上啊有木有。好了，吹牛完毕，学好git用在工作中好好搬砖才是正经事，在github上学到好技术升职加薪迎娶白富美才是正经事，你梭484啊。<br><a id="more"></a></p>
+<h2 id="1-创建版本库"><a href="#1-创建版本库" class="headerlink" title="1.创建版本库"></a>1.创建版本库</h2><ul>
+<li>安装git，至于这个话题就不细说了，按照你电脑的操作系统下载一个合适的git，需要注意的是，配置好环境变量，以便全局可以使用git命令。</li>
+<li>那么，接下来就开始打开你的git bash吧，如果愿意，不妨设置一下你的git bash的界面外观，至少自己看着舒服，写码都感觉是件很愉悦的事情，对吧。</li>
+<li>新建git仓库之前，需要你配置一些个人信息，如果你慢慢的入门了，还可以配置些alias别名，让你使用git健步如飞。<br>git config –global user.email “you@example.com” 配置邮件<br>git config –global user.name “Your Name” 配置用户名<br>这两项是必须配置，否则后面的commit、push到远程库都会失败。至于别名，后面再聊</li>
+<li>现在开始愉快的玩耍了，先cd 到你的一个目录（以windows操作系统为例），比如：cd d:</li>
+<li>先创建目录，作为仓库：mkdir myrepo</li>
+<li>git init 初始化仓库，可以发现当前目录下多了一个.git的目录，这个目录是Git来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，不然改乱了，就把Git仓库给破坏了</li>
+<li>vim readme.txt 新建一个文本文件，比如往里面添加简单的一行字符串</li>
+<li>git add readme.txt 添加一个文件，比如readme.txt，如果目录里面的所有文件都要添加，可以git add *</li>
+<li>git commit-m “添加一个readme.txt文件” 将文件提交到仓库，并加上说明（这时候是版本1）</li>
+</ul>
+<h2 id="2-提交修改"><a href="#2-提交修改" class="headerlink" title="2.提交修改"></a>2.提交修改</h2><p>假如此时第一次修改了readme.txt文件</p>
+<ul>
+<li>git status 让我们时刻掌握仓库当前的状态。这时告诉我们，readme.txt被修改过了，但还没有准备提交的修改。</li>
+<li>git diff readme.txt 查看对readme.txt做了什么修改</li>
+<li>git add readme.txt 提交修改和提交新文件是一样，先git add</li>
+<li>git status 可以再用git status查看仓库的当前状态，告诉我们，将要被提交的修改包括readme.txt</li>
+<li>git commit-m “第一次修改” 然后再git commit，并添加修改的描述（这时候是版本2）</li>
+<li>git status 可以再执行git status看仓库状态，因为所有的都提交了，Git告诉我们当前没有需要提交的修改，而且，工作目录是干净（working directory clean）的。</li>
+</ul>
+<h2 id="3-版本回退"><a href="#3-版本回退" class="headerlink" title="3.版本回退"></a>3.版本回退</h2><p>你可以像上面所说的那样不停的提交新的文件、提交对文件的修改<br>这时候第二次修改readme.txt文件</p>
+<ul>
+<li>git add readme.txt 先git add</li>
+<li>git commit -m “第二次修改” 提交第二次修改（这时候是版本3）</li>
+<li>git log 显示从最近到最远的提交日志，具体显示的内容自己试一试看看</li>
+<li>git log –pretty=oneline 如果嫌输出信息太多，看得眼花缭乱，试试加上–pretty=oneline参数<br>看这篇教程去理解为什么Git的版本号要这么长，Git的版本号类似：3628164fb26d48395383f8f31179f24e0882e1e0 这样的特别长的十六进制数。</li>
+<li>git reset –hard HEAD^ 会回退到上一个版本，也就是从版本3回退到版本2<br>在Git中，用HEAD表示当前版本，也就是最新的提交3628164…882e1e0（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100</li>
+<li>vim readme.txt 可以看到此时的readme.txt文件就是版本2时候的内容，回退成功！<br>git log 此时看到版本3的信息没有了</li>
+<li>git reset –hard 3628164 通过命令行上的历史信息（假如你没清屏的话），找到版本3 的版本号，不一定要全部的版本号，就像这个命令的例子，只要前面的约7、8位这样就可以指定回到版本3</li>
+<li>vim readme.txt 看到的是第三版本的readme.txt文件的内容，所以又回来了<br>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向你要回退的那个版本</li>
+<li>git reflog 记录你的每一次命令，最先显示的是这个命令执行之后的版本的版本号的前七位，这样就算你清屏了或者重启了，也能找到某个版本的版本号，就可以轻松回退到那个版本</li>
+</ul>
+<h2 id="4-工作区、版本库和暂存区"><a href="#4-工作区、版本库和暂存区" class="headerlink" title="4.工作区、版本库和暂存区"></a>4.工作区、版本库和暂存区</h2><p>工作区：就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区。</p>
+<p>版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</p>
+<p>暂存区：Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。</p>
+<p>前面讲了我们把文件往Git版本库里添加的时候，是分两步执行的：</p>
+<p>第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br>因为我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。</p>
+<p>你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</p>
+<p>详细知识见这篇教程。必须理解暂存区、工作区、版本库。这些都是是Git非常重要的概念，弄明白了这些概念，就弄明白了Git的很多操作到底干了什么。没弄明白的话，请反复看！！</p>
+<h2 id="5-管理修改"><a href="#5-管理修改" class="headerlink" title="5.管理修改"></a>5.管理修改</h2><p>为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件。</p>
+<p>什么是修改？比如你新增了一行，这就是一个修改，删除了一行，也是一个修改，更改了某些字符，也是一个修改，删了一些又加了一些，也是一个修改，甚至创建一个新文件，也算一个修改。</p>
+<p>通过实例讲解什么叫跟踪修改，要想理解，请参考原文结合暂存区的知识理解：</p>
+<ul>
+<li>vim readme.txt 编辑文件，比如添加新的一行</li>
+<li>git add readme.txt 添加，但是不提交</li>
+<li>vim readme.txt 再编辑文件，比如再添加一行</li>
+<li>git commit -m “修改两次，添一次，提交一次” 提交</li>
+<li>git status 看到的效果是：只提交了第一次的修改，第二次的修改没有提交<br>那怎么提交第二次修改呢？你可以继续git add再git commit，也可以别着急提交第一次修改，先git add第二次修改，再git commit，也就是第一次修改 -&gt; git add -&gt; 第二次修改 -&gt; git add -&gt; git commit，就相当于把两次修改合并后一块提交了。</li>
+</ul>
+<h2 id="6-撤销修改"><a href="#6-撤销修改" class="headerlink" title="6.撤销修改"></a>6.撤销修改</h2><p>第一种情况</p>
+<p>修改了readme.txt文件，还没有git add 和git commit<br>但是在你提交之前发现这次修改有问题。既然错误发现得很及时，就可以很容易地纠正它。你可以手动把文件恢复到上一个版本的状态。<br>git checkout – readme.txt 也可以通过命令撤销修改，这条命令的意思就是，把readme.txt文件在工作区的修改全部撤销<br>无论是文件修改后值存在于工作区还没有放到暂存区，还是已经添加到暂存区，总之这个命令就是让这个文件回到最近一次git commit或git add时的状态。<br>查看文件，内容果然复原了。git checkout – file命令中的–很重要，没有–，就变成了“切换到另一个分支”的命令，我们在后面的分支管理中会再次遇到git checkout命令。<br>第二种情况</p>
+<p>修改了readme.txt文件，而且执行了git add readme.txt<br>庆幸的是你在 git commit 之前发现了这个问题</p>
+<ul>
+<li>git status 查看一下，修改只是添加到了暂存区，还没有提交</li>
+<li>git reset HEAD readme.txt 可以把暂存区的修改撤销掉，重新放回工作区。git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。</li>
+<li>git status 查看一下，现在暂存区是干净的，工作区有修改</li>
+<li>git checkout – readme.txt 还记得第一种情况中如何丢弃工作区的修改吧<br>第三种情况</li>
+</ul>
+<p>现在，假设你不但改错了东西，还从暂存区提交到了版本库，怎么办呢？还记得版本回退一节吗？可以回退到上一个版本。不过，这是有条件的，就是你还没有把自己的本地版本库推送到远程。</p>
+<p>还记得Git是分布式版本控制系统吗？我们后面会讲到远程版本库，一旦你把错误的修改（如果是影响很大的错误）提交推送到远程版本库，你就真的惨了……</p>
+<p>区别对待本地版本库和远程版本库！</p>
+<h2 id="7-删除文件"><a href="#7-删除文件" class="headerlink" title="7.删除文件"></a>7.删除文件</h2><p>在Git中，删除也是一个修改操作</p>
+<p>添加一个新的文件 test.txt</p>
+<ul>
+<li>git add test.txt</li>
+<li>git commit test.txt -m “再次新增一个文件”<br>一般情况下，你通常会在文件管理器中把没用的文件删除，或者直接rm test.txt</li>
+<li>git status 这个时候，Git知道你删除了文件，因此，工作区和版本库就不一致了，git status命令会立刻告诉你哪些文件被删除了<br>现在你有两个选择，一是确实从版本库中删除该文件，那就git rm test.txt，然后git commit 文件就从版本库中删除了<br>另一种情况是删除错了，因为版本库里还有，所以可以轻松地将误删除的文件恢复到最新版本git checkout – test.txt git checkout其实使用版本库中的版本替换工作区的版本，无论工作区是修改还是删除，都可以’一键还原’</li>
+</ul>
+<h2 id="8-添加远程库"><a href="#8-添加远程库" class="headerlink" title="8.添加远程库"></a>8.添加远程库</h2><p>要想学习这部分的知识，需要先在github上添加你的ssh keys。</p>
+<ul>
+<li>回到你的github首页，点击你自己的小头像，出现下拉选项，选择settings。</li>
+<li>这个时候打开了新页面，请看页面左侧，找到ssh keys选项，点击进入</li>
+<li>点击add ssh keys按钮，就可以添加你本地的ssh keys了</li>
+</ul>
+<p>好了，问题来了，我本地的ssh keys在哪里呢，或是怎么获取呢。很简单，咱们一步步来看。</p>
+<ul>
+<li>回到你的git bash窗口</li>
+<li>键入以下命令：ssh-keygen -t rsa -C “你的邮箱地址”</li>
+<li>最后得到了两个文件：id_rsa和id_rsa.pub，需要把刚才生成的id_rsa.pub里面的内容复制粘贴到刚才的github页面上的ssh keys里面即可</li>
+<li>cat ~/.ssh/id_rsa.pub就可以查看到内容</li>
+</ul>
+<p>那么，咱们还有一个简单的过程，就是在你的github上添加一个仓库啊</p>
+<ul>
+<li>这个就不细说了，在你的github首页上面，你的头像旁边有个加号，点击就会出现下拉选项</li>
+<li>选择new repository，接下来的过程就新建一个你的git仓库吧。</li>
+</ul>
+<p>假如现在你已经配置好github，并且在github上添加了learngit仓库。</p>
+<ul>
+<li>git remote add origin git@github.com:iUAP-FE/learngit.git 这个命令是在本地的learngit仓库下执行的，前面通过learngit仓库为例我们已经讲过在本地创建和操作git仓库。这两个地方的仓库名不需要相同，因为会通过在本地的仓库目录下执行这条命令（命令中包含远程库的名字）已经将两者建立了联系<br>请千万注意，把上面的iUAP-FE替换成你自己的GitHub账户名，learngit替换为你的github上的仓库名，否则，你在本地关联的就是我的远程库，关联没有问题，但是你以后推送是推不上去的，因为你的SSH Key公钥不在我的账户列表中。</li>
+<li>git push -u origin master 把本地库的所有内容推送到远程库上。把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br>然后去Github对应的远程库看看，都已经推送上去了。<br>此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改。<br>这样你就可以在Github上托管你的项目代码、重要的文档……</li>
+</ul>
+<h2 id="9-从远程库克隆"><a href="#9-从远程库克隆" class="headerlink" title="9.从远程库克隆"></a>9.从远程库克隆</h2><p>假设我的github上面有一个远程库，但是本地没有，需要克隆到本地，远程库的名字叫’gitskills’</p>
+<ul>
+<li>git clone git@github.com:iUAP-FE/learngit.git 克隆一个本地库</li>
+<li>cd gitskills 进入克隆下来的本地库，默认的名字是和github上的一样的</li>
+<li>ls -al 可以看到本地的克隆库里面是和远程库里面的一样的<br>如果有多个人协作开发，那么每个人各自从远程克隆一份就可以了。<br>你也许还注意到，GitHub给出的地址不止一个，还可以用git@github.com:iUAP-FE/learngit.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。</li>
+</ul>
+<p>使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</p>
+<h2 id="10-分支管理"><a href="#10-分支管理" class="headerlink" title="10.分支管理"></a>10.分支管理</h2><p>分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。</p>
+<p>现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。</p>
+<p>其他版本控制系统如SVN等都有分支管理，但是用过之后你会发现，这些版本控制系统创建和切换分支比蜗牛还慢，简直让人无法忍受，结果分支功能成了摆设，大家都不去用。</p>
+<p>但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。</p>
+<h2 id="11-创建和合并分支"><a href="#11-创建和合并分支" class="headerlink" title="11.创建和合并分支"></a>11.创建和合并分支</h2><p>首先教程中会详细讲解分支的原理（分支、指针、工作区……），一定要好好看！！看完之后你才能对你的创建分支和合并分支的操作不只是会用，更能在用的时候没有任何疑惑！反正能学到更多的知识，何乐而不为！</p>
+<p>另外推荐这样的博客：使用git和github进行协同开发流程以及我的学习笔记使用git和github管理自己的项目—真实开发环境的策略。</p>
+<p>在版本回退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，我们练习的learngit，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
+<p>开始实战：</p>
+<ul>
+<li>git checkout -b dev 创建一个新的分支：dev，并且会切换到dev分支。所以这条命令有两个作用。git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：git branch dev 和 git checkout dev<br>补充：所有的git管理的项目刚开始时候默认有一条分支：master</li>
+<li>git branch 查看当前所在的分支。git branch命令会列出所有分支，当前分支前面会标一个*号。<br>因为切换到dev分支，所以我们现在可以在dev分支上正常提交，比如对readme.txt做一个修改</li>
+<li>git add readme.txt</li>
+<li>git commit -m “提交到dev分支”</li>
+<li>git checkout master 现在，dev分支的工作完成，我们就可以切换回master分支<br><em>注意:</em>切换回master分支后，再查看一个readme.txt文件，刚才添加的内容不见了！因为那个提交是在dev分支上，而master分支此刻的提交点并没有变</li>
+<li>git merge dev 这是在master分支上执行的命令，作用是：把dev分支上的工作成果合并到master分支上</li>
+<li>git merge命令用于合并指定分支到当前分支。合并后，再查看readme.txt的内容，就可以看到，和dev分支的最新提交是完全一样的。注意到上面的Fast-forward信息，Git告诉我们，这次合并是“快进模式”，也就是直接把master指向dev的当前提交，所以合并速度非常快。当然，也不是每次合并都能Fast-forward，我们后面会将其他方式的合并。</li>
+<li>git branch -d dev 合并完成之后，可以放心的删除dev分支了</li>
+<li>git branch 删除后，查看branch，只剩下master了</li>
+</ul>
+<h2 id="12-解决冲突"><a href="#12-解决冲突" class="headerlink" title="12.解决冲突"></a>12.解决冲突</h2><p>人生不如意之事十之八九，合并分支往往也不是一帆风顺的。</p>
+<ul>
+<li>git checkout -b feature1 创建新的分支feature1，并且换到这个分支，进行新的实验<br>在feature1分支下，假如将readme.txt的最后一行由”test branch” 改为”test feature1”</li>
+<li>git add readme.txt</li>
+<li>git commit -m “在feature1上修改readme.txt的最后一行” 在feature1分支上提交</li>
+<li>git checkout master 切换到master分支。Git还会自动提示我们当前master分支比远程的master分支要超前1个提交。<br>在master分支下，假如将readme.txt的最后一行由”test branch” 改为”test master”因为上面的是在feature1上进行的修改，所以切换回master之后，看到的文件并不是在feature1上修改后的文件</li>
+<li>git add readme.txt</li>
+<li>git commit -m “又在master上修改了readme.txt文件” 在master上也提交修改<br>现在，master分支和feature1分支各自都分别有新的提交</li>
+<li>git merge feature1 在master分支上执行该命令，与feature1分支合并。这种情况下，Git无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，果然冲突了！Git告诉我们，readme.txt文件存在冲突，必须手动解决冲突后再提交</li>
+<li>git status git status也可以告诉我们冲突的文件<br>这时候使用vim等编辑器打开readme.txt文件可以看到已经在readme.txt文件中将冲突的信息已经添加到里面了，Git用&lt;&lt;&lt;&lt;&lt;&lt;&lt;，=======，&gt;&gt;&gt;&gt;&gt;&gt;&gt;标记出不同分支的内容<br>然后我们编辑readme.txt文件，处理冲突，将内容改成我们想要的样子</li>
+<li>git add readme.txt</li>
+<li>git commit -m “解决冲突” 在master上提交</li>
+<li>git log –graph –pretty=oneline –abbrev-commit 用带参数的git log可以看到分支的合并情况。用git log –graph命令可以看到分支合并图。</li>
+<li>git branch -d feature1 最后删除feature分支，完成工作。</li>
+</ul>
 ]]></content>
     </entry>
     
