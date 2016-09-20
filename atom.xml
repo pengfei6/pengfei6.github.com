@@ -887,6 +887,8 @@ function unsetCookie(name) {
       <category term="总结整理" scheme="http://pengfei6.github.io/categories/%E6%80%BB%E7%BB%93%E6%95%B4%E7%90%86/"/>
     
     
+      <category term="JavaScript" scheme="http://pengfei6.github.io/tags/JavaScript/"/>
+    
       <category term="面试" scheme="http://pengfei6.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="2016" scheme="http://pengfei6.github.io/tags/2016/"/>
@@ -895,7 +897,685 @@ function unsetCookie(name) {
     
       <category term="整理" scheme="http://pengfei6.github.io/tags/%E6%95%B4%E7%90%86/"/>
     
+  </entry>
+  
+  <entry>
+    <title>前端工程化不完全装逼指南</title>
+    <link href="http://pengfei6.github.io/2016/04/20/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E4%B8%8D%E5%AE%8C%E5%85%A8%E8%A3%85%E9%80%BC%E6%8C%87%E5%8D%97/"/>
+    <id>http://pengfei6.github.io/2016/04/20/前端工程化不完全装逼指南/</id>
+    <published>2016-04-20T13:16:14.000Z</published>
+    <updated>2016-09-20T14:59:31.724Z</updated>
+    
+    <content type="html"><![CDATA[<p>文中部分内容参考自@fouber和@xufei，向前辈致敬。</p>
+<blockquote>
+<p>如今很多企业和团队尚未重视前端工程，又或是这个概念在很多人眼里还只是“构建工具”的代名词。</p>
+</blockquote>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p><strong>多样</strong></p>
+<p>打开手机，查看你的手机屏幕，你很习惯的点击打开你想用的APP；打开微信，去浏览你好奇的文章，把玩你喜欢的游戏；你慵懒的坐在沙发上，手指在你笔记本的触摸屏上轻轻滑动，你习惯性的打开淘宝京东购物，或是去浏览新闻去灌水聊天。而你习惯使用的这些产品，都是工程师们一行行代码敲出来的，在你享受互联网带来的便捷的同时，我们这群码农也在享受开发带来的酸爽。<br><a id="more"></a><br><strong>迷茫</strong></p>
+<p>那么，无论是什么样的产品，总会有同样苦逼的程序猿同学在辛苦的搬砖。他们在写着不同逻辑的代码，去遇到相同情况的技术问题。越来越复杂的web应用，如何规划好逻辑的调用、如何管理一堆的CSS代码、如何组织项目目录、如何团队协作、如何上线部署、如何模块化的实现代码复用…..</p>
+<p><strong>破局</strong></p>
+<p>尽管遇到的问题很多，但是，有什么事情可以难住机智如你的大脑。见招拆招，东拼西凑，在处理问题的过程中慢慢形成自己团队的方案和风格。如果你是一位有经验的前端工程师，相信你也在自己的团队里面走过了下面这些路。</p>
+<h2 id="前端面临的挑战"><a href="#前端面临的挑战" class="headerlink" title="前端面临的挑战"></a>前端面临的挑战</h2><h3 id="1-技术选型"><a href="#1-技术选型" class="headerlink" title="1. 技术选型"></a>1. <strong>技术选型</strong></h3><p>前端技术选型可真是件有趣的事情，形形色色的类库和框架的挑选，简直比相亲选姑娘还让人纠结。经常听到这样的声音，angular好还是react好，用requirejs合适还是seajs合适，选bootstrap好看还是ionic好看….根据特定项目的特定进行相应的技术选型，是前端团队必然面临的一个问题。</p>
+<h3 id="2-项目构建"><a href="#2-项目构建" class="headerlink" title="2. 项目构建"></a>2. <strong>项目构建</strong></h3><p>虽然谈到项目构建，但依然还是很多前端同学不知道Grunt或是Gulp为何物，他们依然手写css、html、js，如果要压缩代码，则百度一下在线压缩，找个工具copy代码压缩后再copy回来，如果要加版本戳，则在文件后面加上类似<code>?t=2015423432</code>等标识，如果需要异构less或sass，他们依然会去找个其他独立的工具来做这个事情。没错，依然会有很多的前端团队在如此工程化程度低的环境工具，也许跟公司的技术氛围有关吧。但至少现在，市面上有很优秀的构建工具来帮我们做这些事情，比如grunt、gulp、webpack、fis、jdf、coolie等等，用它们来做代码的解析、压缩、校验、合并打包等自动化工作，我们可以很轻易的基于这些工具去搭建一套我们的前端工作流。但这只是前端工程化的一部分，我们的路还很长。</p>
+<h3 id="3-模块化开发"><a href="#3-模块化开发" class="headerlink" title="3. 模块化开发"></a>3. <strong>模块化开发</strong></h3><p>该和一个文件几千几万行代码的时代说再见了，我们需要模块化的开发。既然web应用很复杂，那我们就应当将复杂的事情简单化，从纷乱的逻辑中抽丝剥茧般找到清晰的逻辑规划，分而治之的模块化思想，是开发和维护复杂应用的基石。这里提到的模块化包括JS模块化和CSS的模块化，而其中的方案相比大家都比较熟知了。如，JS模块化方案就有AMD/CommonJS/UMD/ES6 Modlue等，与模块方案对应的框架和工具也很多；CSS模块化开发基本都是通过less、sass、stylus等预处理器来实现的。实现了模块化的开发，对于团队而言，火力已上升一个数量级，至少不用再为以前的低效开发方式愁苦。</p>
+<hr>
+<p>虽然历经了磨难，我们的前端团队经历以上几步的洗礼，已然能够cover住公司复杂业务的需求，但是，码农的世界并未就此清净，否则，寂静的深夜也不会有那么多闪闪屏幕前极速敲击的键盘声响。自动化项目构建、模块化开发以及合理的技术选型可以满足基本业务开发，但前端面临的工程问题依然还很严峻：</p>
+<ul>
+<li>如何进行多团队跨部门的进行大规模开发，如何统一开发规范</li>
+<li>构建高性能的web应用，我们还有很多事情要做：<ul>
+<li>CDN部署</li>
+<li>缓存控制与复用</li>
+<li>文件指纹</li>
+<li>按需加载、同步/异步加载</li>
+<li>合并请求</li>
+<li>….</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>要做到大幅提升前端开发效率，并且兼顾web性能优化，那么首先需要考虑好组件化开发和静态资源管理两大壁垒的攻破，很显然，这已非难事。</p>
+<h3 id="4-组件化开发"><a href="#4-组件化开发" class="headerlink" title="4. 组件化开发"></a>4. <strong>组件化开发</strong></h3><p>在这React燥热的年代，相信你对组件化的说法早已是耳熟能详了。组件的概念虽很普遍，但是大家对组件的理解却各有不同，而这里说的组件指UI组件。实现组件化目前也有很多方案了，在@fufei的<a href="https://github.com/xufei/blog/issues/19" target="_blank" rel="external">深度博文</a>中提到了对组件化框架的解读。同时，@fouber对组件化理念的解读我也比较赞同：</p>
+<ul>
+<li>页面的每个独立可视区域都可为一个组件</li>
+<li>每个组件对应独立目录，组件资源就近维护</li>
+<li>组件可自由组合，页面组件可自由删替<br>这也是React对组件的定义。对应的，组件化实现的方案也比较丰富：</li>
+<li>通过扩展模板语法及结合工具框架实现资源重组的组件化方案</li>
+<li>React结合JSX语法的组件化方案</li>
+<li>Polymer &amp;&amp; Web Components方案</li>
+<li>Angular</li>
+<li>Vuejs<br>对于组件化的实践，美团点评的<a href="http://tech.meituan.com/frontend-component-practice.html" target="_blank" rel="external">前端组件化开发实践</a>这篇文章讲的很不错。</li>
+</ul>
+<h3 id="5-静态资源管理"><a href="#5-静态资源管理" class="headerlink" title="5. 静态资源管理"></a>5. <strong>静态资源管理</strong></h3><p>对于前端静态资源的管理，自第一点起我们就需要面临，无论你的项目前端工程化程度如何，无论前端技术如何的演变，静态资源增量加载方案的探索都将是重中之重，是检验基础架构优劣的试金石。</p>
+<p>资源管理的问题，说容易也容易，把html、js、css、images等资源往服务器上一扔，用户可以正常访问页面，完美，收工回家睡觉。但说复杂也复杂，比如说FB网站的建设，整站一万多个静态资源，每个资源翻译成100种语言，光这都足够让你睡不着觉了…</p>
+<p>而百度FIS团队通过对FB系统分析得出的资源管理的启示让人印象深刻：</p>
+<blockquote>
+<p>静态资源管理系统 = 资源表 + 资源加载框架</p>
+</blockquote>
+<p>基于此再对应的思考实践：</p>
+<blockquote>
+<p>一个通用的资源表生成工具 + 基于表的资源加载框架</p>
+</blockquote>
+<p>基于工具和框架的性能优化方案：</p>
+<blockquote>
+<ul>
+<li>加载相关的按需加载、延迟加载、预加载、请求合并等策略；</li>
+<li>有缓存相关的浏览器缓存利用，缓存更新、缓存共享、非覆盖式发布等方案；</li>
+<li>BigRender、BigPipe、Quickling、PageCache等技术</li>
+</ul>
+</blockquote>
+<h2 id="前端技术元素归纳"><a href="#前端技术元素归纳" class="headerlink" title="前端技术元素归纳"></a>前端技术元素归纳</h2><blockquote>
+<p>如果我跟你说，以上的内容都是铺垫，现在才刚刚暖场，你会不会拿板砖拍我，哈哈。</p>
+</blockquote>
+<p>其实，从以上的分析结合前端这些年的发展，我们可以归纳出，一个web前端团队大概会遇到的技术元素：</p>
+<h3 id="1-开发规范"><a href="#1-开发规范" class="headerlink" title="1. 开发规范"></a>1. 开发规范</h3><p>这里的开发规范包括开发、部署的目录规范，编码规范等，团队合理的规范可以极大的提升开发效率，帮助他们快速定位问题。</p>
+<h3 id="2-模块化开发"><a href="#2-模块化开发" class="headerlink" title="2. 模块化开发"></a>2. 模块化开发</h3><p>针对js、css，以功能或业务为单元组织代码。js方面解决独立作用域、依赖管理、api暴露、按需加载与执行、安全合并等问题，css方面解决依赖管理、组件内部样式管理等问题。是提升前端开发效率的重要基础。现在流行的模块化框架有requirejs、seajs等。</p>
+<h3 id="3-组件化开发及组件仓库"><a href="#3-组件化开发及组件仓库" class="headerlink" title="3. 组件化开发及组件仓库"></a>3. 组件化开发及组件仓库</h3><p>在模块化基础上，组件单元的资源就近开发维护，组件也需要分为通用组件、业务组件、公共组件，方便最大限度地组件管理，将一些非常通用的组件放到一个公共的地方供团队共享，方便新项目复用，这个时候我们就需要引入一个组件仓库的东西，现在流行的组件库有bower、component等。团队发展到一定规模后，组件库的需求会变得非常强烈。</p>
+<h3 id="4-性能优化"><a href="#4-性能优化" class="headerlink" title="4. 性能优化"></a>4. 性能优化</h3><p>这里的性能优化是指能够通过工程手段保证的性能优化点。性能优化是前端项目发展到一定阶段必须经历的过程。这部分我想强调的一点是 性能优化一定是一个工程问题和统计问题，不能用工程手段保证的性能优化是不靠谱的，优化时只考虑一个页面的首次加载，不考虑全局在宏观统计上的优化提升也是片面的。</p>
+<h3 id="5-项目部署"><a href="#5-项目部署" class="headerlink" title="5. 项目部署"></a>5. 项目部署</h3><p>部署按照现行业界的分工标准，虽然不是前端的工作范畴，但它对性能优化有直接的影响，包括静态资源缓存、cdn、非覆盖式发布等问题。合理的静态资源资源部署可以为前端性能带来较大的优化空间。</p>
+<h3 id="6-开发流程"><a href="#6-开发流程" class="headerlink" title="6. 开发流程"></a>6. 开发流程</h3><p>完整的开发流程包括本地开发调试、视觉效果走查确认、前后端联调、提测、上线等环节。对开发流程的改善可以大幅降低开发的时间成本，而一些独立的上线系统比如cms系统、静态资源推送系统等将开发流程割裂开，对前端开发的效率有严重的阻碍。</p>
+<h3 id="7-开发工具"><a href="#7-开发工具" class="headerlink" title="7. 开发工具"></a>7. 开发工具</h3><p>开发工具是指包括构建与优化工具、开发-调试-部署等流程工具，以及组件库获取、提交等相关工具，甚至运营、文档、配置发布等平台工具。前端开发形成一个连贯可持续优化的开发体系需要工具支持，工具的设计至关重要。</p>
+<blockquote>
+<p>一个前端团队的技术体系形成过程，无外乎是在努力拼凑上述的各项技术元素的具体解决方案，真正能够提出解决以上所有问题的方案才可以称之为集成解决方案。FIS和JDF做到了，当然也有很多其他团队做到了。</p>
+</blockquote>
+<h2 id="FIS3的介绍和使用"><a href="#FIS3的介绍和使用" class="headerlink" title="FIS3的介绍和使用"></a>FIS3的介绍和使用</h2><p>FIS3 是面向前端的工程构建工具。解决前端工程中性能优化、资源加载（异步、同步、按需、预加载、依赖管理、合并、内嵌）、模块化开发、自动化工具、开发规范、代码部署等问题。</p>
+<p>官网：<a href="http://fis.baidu.com/fis3/index.html" target="_blank" rel="external">http://fis.baidu.com/fis3/index.html</a></p>
+<p>方案：<a href="http://oak.baidu.com/" target="_blank" rel="external">http://oak.baidu.com/</a></p>
+<p>github：<a href="https://github.com/fex-team/fis3" target="_blank" rel="external">https://github.com/fex-team/fis3</a></p>
+<p>fis3的demo示例：<a href="https://github.com/fex-team/fis3-demo" target="_blank" rel="external">https://github.com/fex-team/fis3-demo</a></p>
+<h2 id="Jello的实践"><a href="#Jello的实践" class="headerlink" title="Jello的实践"></a>Jello的实践</h2><blockquote>
+<p>Jello是基于服务端为java，velocity/jsp为模板的解决方案。学习地址：<a href="http://oak.baidu.com/jello-demo/" target="_blank" rel="external">http://oak.baidu.com/jello-demo/</a></p>
+</blockquote>
+<p>我的实践介绍：</p>
+<ol>
+<li>对整站web应用划分业务系统</li>
+<li>选择后端jsp模板语言对接spring mvc架构</li>
+<li>js代码遵循commonjs模块化规范</li>
+<li>widget组件化</li>
+<li>选择less预处理器进行css模块化</li>
+<li>性能优化</li>
+<li>shell脚本部署</li>
+<li>模拟数据，前后端独立开发</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文中部分内容参考自@fouber和@xufei，向前辈致敬。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如今很多企业和团队尚未重视前端工程，又或是这个概念在很多人眼里还只是“构建工具”的代名词。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;多样&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;打开手机，查看你的手机屏幕，你很习惯的点击打开你想用的APP；打开微信，去浏览你好奇的文章，把玩你喜欢的游戏；你慵懒的坐在沙发上，手指在你笔记本的触摸屏上轻轻滑动，你习惯性的打开淘宝京东购物，或是去浏览新闻去灌水聊天。而你习惯使用的这些产品，都是工程师们一行行代码敲出来的，在你享受互联网带来的便捷的同时，我们这群码农也在享受开发带来的酸爽。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端工程化" scheme="http://pengfei6.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+    
+      <category term="前端工程化" scheme="http://pengfei6.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对前端模板的思考</title>
+    <link href="http://pengfei6.github.io/2016/04/20/%E5%89%8D%E7%AB%AF%E6%A8%A1%E6%9D%BF/"/>
+    <id>http://pengfei6.github.io/2016/04/20/前端模板/</id>
+    <published>2016-04-20T13:16:14.000Z</published>
+    <updated>2016-09-20T14:59:31.751Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>这几天，我一直对模板这个词耿耿于怀。暂且不去思考后端的工程模板什么的，就单单前端而言，模板很容易让人想到的是模板引擎，Underscore Templates、Embedded JS Templates、HandlebarsJS。在node上用的还有Jade templating、ejs、express template….。等等，但是boss想的不是这个模板啊，应该是快速开发方向去思考，模板应该是页面，应该是一看到就能拿过来用的页面，这样帮助程序猿快速开发啊。原来发现，认知就不在一个频道。<br><a id="more"></a></p>
+<h2 id="模板引擎总结"><a href="#模板引擎总结" class="headerlink" title="模板引擎总结"></a>模板引擎总结</h2><ul>
+<li>angular</li>
+<li>果纯用模板的话，推荐doT，速度快，支持编译成函数。</li>
+<li>react，比模板更高级点。</li>
+<li>vue.js 国人做的框架 和angular类似 不过精简了很多。中文文档非常全。</li>
+<li>mustcache</li>
+<li>模板引擎看一下 layer的吧</li>
+<li>如果想高级的推荐 riotjs 2.0，riotjs，你看看它1.x的版本里面有个简洁的模板实</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">riot.render = function(tmpl, data, escape_fn) &#123;</div><div class="line">    if (escape_fn === true) escape_fn = default_escape_fn;</div><div class="line">    tmpl = tmpl || &apos;&apos;;</div><div class="line">    return (FN[tmpl] = FN[tmpl] || new Function(&quot;_&quot;, &quot;e&quot;, &quot;try &#123; return &apos;&quot; +</div><div class="line">        tmpl.replace(/[\\\n\r&apos;]/g, function(char) &#123;</div><div class="line">            return template_escape[char];</div><div class="line">        &#125;).replace(/&#123;\s*([\w\.]+)\s*&#125;/g, &quot;&apos; + (e?e(_.$1,&apos;$1&apos;):_.$1||(_.$1==undefined?&apos;&apos;:_.$1)) + &apos;&quot;) + &quot;&apos; &#125; catch(e) &#123; return &apos;&apos; &#125;&quot;)</div><div class="line">    )(data, escape_fn);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>JADE</li>
+<li>UNDERSCOREJS</li>
+<li>HANDLEBARSJS</li>
+<li>DOTJS</li>
+</ul>
+<p><a href="http://codecall.net/2014/04/23/10-best-javascript-template-engines-for-developers/" target="_blank" rel="external">10款模板引擎</a></p>
+<h2 id="对页面的快速开发的思考"><a href="#对页面的快速开发的思考" class="headerlink" title="对页面的快速开发的思考"></a>对页面的快速开发的思考</h2><h3 id="方向之一：模板引擎"><a href="#方向之一：模板引擎" class="headerlink" title="方向之一：模板引擎"></a>方向之一：模板引擎</h3><p>使用模板引擎，可以实现代码复用，可以增强渲染性能。</p>
+<h3 id="方向之二：示例页面"><a href="#方向之二：示例页面" class="headerlink" title="方向之二：示例页面"></a>方向之二：示例页面</h3><p>一个示例页面，应该是对某个典型场景的展示示例，也许不需修改或是简单修改，即可拿来就用。</p>
+<h3 id="方向之三：UI组件"><a href="#方向之三：UI组件" class="headerlink" title="方向之三：UI组件"></a>方向之三：UI组件</h3><p>这是一种组件化的方式：一个页面切分为多个UI组件，每个UI组件功能独立，可以直接复用到任何一个页面，每个UI组件会有其独立的css、js、json、模板片段(jsx php html jsp vm…)。</p>
+<h2 id="对示例页面的理解"><a href="#对示例页面的理解" class="headerlink" title="对示例页面的理解"></a>对示例页面的理解</h2><blockquote>
+<p>分两个方向：一个是抽出一些典型的业务相关页面；一个是示例页面由我们封装的UI组件组成，说到底，我们沉淀的是组件，示例页面只是呈现组件的方式。</p>
+</blockquote>
+<h3 id="典型的业务相关页面"><a href="#典型的业务相关页面" class="headerlink" title="典型的业务相关页面"></a>典型的业务相关页面</h3><p>这里话不多说，我们已经积攒了部分页面。但纠结要给哪些典型页面，哪些场景的页面，页面要出到什么程度，这个很难说。开发者即使感觉你的页面有点用户，也是轻易不会去用的，因为拿来终究是需要修改的，麻烦。或者开发者所在的公司有UE出图，那更不需要了，他们需要的，是功能插件，他们没有时间精力甚至是能力去封装的功能插件。</p>
+<h3 id="由UI组件组成的示例页面"><a href="#由UI组件组成的示例页面" class="headerlink" title="由UI组件组成的示例页面"></a>由UI组件组成的示例页面</h3><p>这个方向需要好好聊一下。看下图：</p>
+<p><img src="/img/page.png" alt="page"></p>
+<p>页面的UI组件细分：</p>
+<p><img src="/img/templates.png" alt="templates"></p>
+<p>对UI中模板片段的说明：</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;这几天，我一直对模板这个词耿耿于怀。暂且不去思考后端的工程模板什么的，就单单前端而言，模板很容易让人想到的是模板引擎，Underscore Templates、Embedded JS Templates、HandlebarsJS。在node上用的还有Jade templating、ejs、express template….。等等，但是boss想的不是这个模板啊，应该是快速开发方向去思考，模板应该是页面，应该是一看到就能拿过来用的页面，这样帮助程序猿快速开发啊。原来发现，认知就不在一个频道。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端工程化" scheme="http://pengfei6.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+    
+      <category term="前端工程化" scheme="http://pengfei6.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js知识详解</title>
+    <link href="http://pengfei6.github.io/2016/03/20/Node-js%E7%9F%A5%E8%AF%86%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://pengfei6.github.io/2016/03/20/Node-js知识详解/</id>
+    <published>2016-03-20T14:40:05.000Z</published>
+    <updated>2016-09-20T14:44:28.241Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Chapter-1-–-Node-js入门知识"><a href="#Chapter-1-–-Node-js入门知识" class="headerlink" title="Chapter 1 – Node.js入门知识"></a>Chapter 1 – Node.js入门知识</h1><blockquote>
+<p>导读：在这一部分的内容里，主要会简单介绍一下什么是Node.js，它有哪些用武之地，我们为什么要去学习它。另外，还会简单的讨论下Nodejs的优缺点以及适用场景。</p>
+</blockquote>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p><strong>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。</strong></p>
+<p>以上提到的<strong>运行环境</strong>，我们可以这样理解：</p>
+<blockquote>
+<p>JS本身是脚本语言，脚本语言都需要一个解析器才能运行。对于写在HTML页面里的JS，浏览器充当了解析器的角色。<br>而对于需要独立运行的JS，NodeJS就是一个解析器，是JS语言的服务器运行环境，使其流畅的运行于服务器端。<br><a id="more"></a><br><strong>Nodejs的特点是：</strong></p>
+</blockquote>
+<ol>
+<li><p>JavaScript运行环境，相当于js在服务端的一个宿主环境</p>
+</li>
+<li><p>依赖于Chrome V8引擎进行代码解释，V8引擎执行Javascript的速度非常快，性能非常好。</p>
+</li>
+<li><p>事件驱动</p>
+</li>
+<li><p>非阻塞I/O</p>
+</li>
+<li><p>轻量、可伸缩，适于实时数据交互应用</p>
+</li>
+<li><p>单进程，单线程</p>
+</li>
+<li><p>Node提供核心功能模块，使得JavaScript语言可以实现文件的读写、进程管理以及网络通信等功能，在这个意义上，Node又是JavaScript的工具库。</p>
+</li>
+</ol>
+<h2 id="为什么要学nodejs"><a href="#为什么要学nodejs" class="headerlink" title="为什么要学nodejs"></a>为什么要学nodejs</h2><p>包括但不限于以下几点。</p>
+<h3 id="Nodejs市场活跃"><a href="#Nodejs市场活跃" class="headerlink" title="Nodejs市场活跃"></a>Nodejs市场活跃</h3><ul>
+<li>从<a href="https://www.npmjs.com/" target="_blank" rel="external">npmjs.org</a>社区可以看到，有超过20W的第三方package，每天亿级以上的下载量。</li>
+<li><a href="https://github.com/" target="_blank" rel="external">github.com</a>上搜索node相关的项目，15万个以上。</li>
+<li>而且社区非常活跃，参与的开发者众多</li>
+</ul>
+<h3 id="Nodejs应用广泛"><a href="#Nodejs应用广泛" class="headerlink" title="Nodejs应用广泛"></a><strong>Nodejs应用广泛</strong></h3><p>我们来看使用nodejs可以做什么：</p>
+<ul>
+<li>项目管理：npm,grunt, gulp,bower, yeoman</li>
+<li>桌面应用: node-webkit</li>
+<li>Web开发：express,ejs,hexo, socket.io, restify, cleaver, stylus, browserify,cheerio</li>
+<li>工具包 underscore,moment,connet,later,log4js,passport,passport(oAuth),domain,require,reap,commander,retry,PDFkit</li>
+<li>数据库：mysql,mongoose,redis,memcached</li>
+<li>异步：async,wind,eventProxy,bluebird</li>
+<li>部署：forever,pm2,nodemon</li>
+<li>测试：jasmine,karma,protractor</li>
+<li>跨平台：rio,tty</li>
+<li>内核：cluster,http,request</li>
+<li>模板: jade</li>
+<li>博客: ghost,hexo</li>
+<li>微信: weui</li>
+<li>硬件控制: NoduinoWeb</li>
+<li>操作系统: NodeOS</li>
+</ul>
+<blockquote>
+<p>可以这么说，其他语言能做的事情，nodejs都可以做，甚至可以做的更好（不知道这样说会被会被人喷）。当然，更需要结合业务具体分析进行技术选型。</p>
+</blockquote>
+<h3 id="推荐关注"><a href="#推荐关注" class="headerlink" title="推荐关注"></a><strong>推荐关注</strong></h3><ol>
+<li><p><a href="https://github.com/" target="_blank" rel="external">github</a>：在这里可以找到大量nodejs相关的项目，阅读源码源码，查看新技术的一手资料</p>
+</li>
+<li><p><a href="https://nodejs.org" target="_blank" rel="external">nodejs官网</a>：关注Node版本更新，包括api功能及使用、bug修复、新增特性以及未来的发展趋势</p>
+</li>
+<li><p><a href="https://www.npmjs.com/" target="_blank" rel="external">npm官网</a>：在这里搜索你想用的包，参考别人的源代码</p>
+</li>
+<li><p><a href="http://stackoverflow.com/" target="_blank" rel="external">stackoverflow问答社区</a>：有什么疑惑直接在这开问吧，会有很多热情的好基友来帮你解答问题的，比如服务异常、配置什么的。</p>
+</li>
+</ol>
+<h2 id="NodeJS优缺点及适用场景讨论"><a href="#NodeJS优缺点及适用场景讨论" class="headerlink" title="NodeJS优缺点及适用场景讨论"></a>NodeJS优缺点及适用场景讨论</h2><p>基于以上提及的Nodejs特性，我们来看在实际系统问题中是如何体现其优势的。</p>
+<p>Nodejs的出现为我们解决现实当中系统瓶颈提供了新的思路和方案</p>
+<h4 id="解决并发连接的问题"><a href="#解决并发连接的问题" class="headerlink" title="解决并发连接的问题"></a>解决并发连接的问题</h4><p>对于并发连接的问题讨论，为了有更直观的理解，我们来看以下三个模型：</p>
+<ul>
+<li>系统线程模型</li>
+</ul>
+<p><img src="/img/model1.jpg" alt=""></p>
+<p>这种模型的问题显而易见，服务端只有一个线程，并发请求（用户）到达只能处理一个，其余的要先等待，这就是阻塞，正在享受服务的请求阻塞后面的请求了。</p>
+<ul>
+<li>多线程、线程池模型</li>
+</ul>
+<p><img src="/img/model2.jpg" alt=""></p>
+<p>这个模型已经比上一个有所进步，它调节服务端线程的数量来提高对并发请求的接收和响应，但并发量高的时候，请求仍然需要等待。它有个更严重的问题，即服务端与客户端每建立一个连接，都要为这个连接分配一套配套的资源，主要体现为系统内存资源，以PHP为例，维护一个连接可能需要20M的内存。这就是为什么一般并发量一大，就需要多开服务器的原因。</p>
+<ul>
+<li>异步、事件驱动模型</li>
+</ul>
+<p>那么我们来看nodejs是如何处理这个问题的</p>
+<p><img src="/img/model3.jpg" alt=""></p>
+<p>我们同样是要发起请求，等待服务器端响应；但不同的是，点完餐拿到号码后，我们往往会在位置上等待，而在我们后面的请求会继续得到处理，同样是拿了一个号码然后到一旁等待，接待员能一直进行处理。</p>
+<p>等到饭菜做好了，会喊号码，我们拿到了自己的饭菜，进行后续的处理（吃饭）。这个喊号码的动作在NodeJS中叫做回调（Callback），能在事件（烧菜，I/O）处理完成后继续执行后面的逻辑（吃饭），这体现了NodeJS的显著特点：异步机制、事件驱动整个过程没有阻塞新用户的连接（点餐），也不需要维护已经点餐的用户与厨师的连接。</p>
+<p>基于这样的机制，理论上陆续有用户请求连接，NodeJS都可以进行响应，因此NodeJS能支持比Java、PHP程序更高的并发量。</p>
+<p>虽然维护事件队列也需要成本，但由于NodeJS是单线程，事件队列越长，得到响应的时间就越长，并发量上去后面对CPU密集型模型的时候就还是会力不从心，因此依然被部分人诟病。但好在，活跃的社区在持续的解决各种问题，应运而生的<a href="https://github.com/xk/node-threads-a-gogo" target="_blank" rel="external">threads-a-gogo（以下简称TAGG）</a>这个模块就是让node支持多线程模型。</p>
+<blockquote>
+<p>总结一下NodeJS是怎么解决并发连接这个问题的：更改连接到服务器的方式，每个连接发射（emit）一个在NodeJS引擎进程中运行的事件（Event），放进事件队列当中，而不是为每个连接生成一个新的OS线程（并为其分配一些配套内存）。</p>
+</blockquote>
+<h4 id="解决I-O阻塞的问题"><a href="#解决I-O阻塞的问题" class="headerlink" title="解决I/O阻塞的问题"></a>解决I/O阻塞的问题</h4><p>NodeJS解决的另外一个问题是I/O阻塞，看看这样的业务场景：需要从多个数据源拉取数据，然后进行处理，处理的方式有：</p>
+<ol>
+<li>串行获取数据，这是我们一般的解决方案</li>
+<li>NodeJS非阻塞I/O，是通过发射/监听事件来控制执行过程</li>
+</ol>
+<p>NodeJS遇到I/O事件会创建一个线程去执行，然后主线程会继续往下执行，事件代理接收到线程后继续往下执行后面的逻辑，这就是NodeJS非阻塞I/O的特点。</p>
+<p>我们来看以下示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * [require description]</div><div class="line"> * @param  &#123;[type]&#125; &apos;events&apos; [description]</div><div class="line"> * @return &#123;[type]&#125;          [description]</div><div class="line"> */</div><div class="line">var EventEmitter = require(&apos;events&apos;).EventEmitter;</div><div class="line">var event = new EventEmitter();</div><div class="line"></div><div class="line">event.on(&apos;eat&apos;, function() &#123;</div><div class="line">	console.log(&apos;开饭啦&apos;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">console.log(&apos;我要先去散步&apos;);</div><div class="line"></div><div class="line">setTimeout(function() &#123;</div><div class="line">	event.emit(&apos;eat&apos;);</div><div class="line">&#125;, 1000);</div></pre></td></tr></table></figure>
+<h4 id="综合对比分析"><a href="#综合对比分析" class="headerlink" title="综合对比分析"></a>综合对比分析</h4><ol>
+<li>Nodejs具有处理高并发的能力（最重要的优点）</li>
+<li>Nodejs适合I/O密集型应用</li>
+<li>Nodejs不适合CPU密集型应用；CPU密集型应用给Node带来的挑战主要是：由于JavaScript单线程的原因，如果有长时间运行的计算（比如大循环），将会导致CPU时间片不能释放，使得后续I/O无法发起；</li>
+</ol>
+<p>解决方案：分解大型运算任务为多个小任务，使得运算能够适时释放，不阻塞I/O调用的发起；或者使用第三方模块，让Node也可以创建多进程。</p>
+<p>当然，也有很多人吐槽：</p>
+<ol>
+<li><p>只支持单核CPU，不能充分利用CPU</p>
+</li>
+<li><p>可靠性低，一旦代码某个环节崩溃，整个系统都崩溃，原因是nodejs是单进程单线程</p>
+</li>
+</ol>
+<p>But，现在我们都有解决方案：<br>（1）Nnigx反向代理，负载均衡，开多个进程，绑定多个端口；<br>（2）开多个进程监听同一个端口，使用cluster模块；</p>
+<p>戳这里了解<a href="http://taobaofed.org/blog/2015/11/03/nodejs-cluster/" target="_blank" rel="external">更多</a></p>
+<blockquote>
+<p>总而言之，NodeJS适合运用在高并发、I/O密集、少量业务逻辑的场景。</p>
+</blockquote>
+<h1 id="Chapter-2-–-Node-js基础知识"><a href="#Chapter-2-–-Node-js基础知识" class="headerlink" title="Chapter 2 – Node.js基础知识"></a>Chapter 2 – Node.js基础知识</h1><blockquote>
+<p>导读：在这一部分的基础内容中，将会学习如何安装并体验Nodejs，了解Nodejs里面的模块以及相关的代码规范。同时，还可以学习npm包管理器的使用。</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="windows上安装"><a href="#windows上安装" class="headerlink" title="windows上安装"></a>windows上安装</h3><ul>
+<li>先去下载一下<a href="http://git-scm.com/download/" target="_blank" rel="external">git</a>的客户端，可以运行git bash，方便使用shell命令</li>
+</ul>
+<p><code>step1.</code> 进入<a href="https://nodejs.org/" target="_blank" rel="external">nodejs.org</a>下载</p>
+<p><code>step2.</code> 下载完成后，双击默认安装。安装程序会自动添加环境变量</p>
+<p><code>step3.</code> 检测nodejs是否安装成功。打开cmd命令行 输入 :</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node - v</div></pre></td></tr></table></figure>
+<p><code>step4.</code> 检查npm是否安装。由于新版的NodeJS已经集成了npm，所以之前npm也一并安装好了。同样可以使用cmd命令行进行确认。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -v</div></pre></td></tr></table></figure>
+<h3 id="mac上安装"><a href="#mac上安装" class="headerlink" title="mac上安装"></a>mac上安装</h3><ul>
+<li>升级系统</li>
+<li><p>升级xcode</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xcode-select -p</div><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装Homebrew<br>前提是python和ruby安装好<br>官网查看方法</p>
+</li>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="linux上安装"><a href="#linux上安装" class="headerlink" title="linux上安装"></a>linux上安装</h3><ul>
+<li>先要扫平环境问题<br>也可以到官网查看<br>要求gcc 4.2+和g++ 4.2+以及python 2.6和gnu的版本要求</li>
+<li>检查<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cat /etc/redhat-release</div><div class="line">rpm -q gcc rpm -q gcc-c++</div><div class="line">yum -y install gcc gcc-c++ kernel-devel</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>ubuntu下可以apt-get<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">cd /usr/src</div><div class="line">wget 链接</div><div class="line">tar -xf node包名</div><div class="line">cd node包</div><div class="line">./config</div><div class="line">make</div><div class="line">sudo make install</div></pre></td></tr></table></figure></p>
+<ul>
+<li>检查安装是否成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">npm -v</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><blockquote>
+<p>目前最新的都已经到<code>5.1.0</code>，这是从0.12版本后，nodejs和iojs(由于部分开发者对管理模式的不满，便fork了nodejs后创建了io.js，采用独立的社区驱动模式运营这个开源项目，每周一个版本迭代)合并了，直接从4.0版本开始发展了，到如今已经是5.1版本。当然，还在持续更新迭代中。</p>
+</blockquote>
+<p><strong>关于nodejs版本号的说明</strong></p>
+<p>偶数位的版本是稳定版本，而一般奇数位的就是非稳定版本，这几乎是在业界大家都达成共识了。比如0.6.x就是稳定版本，而0.11.x就是新功能测试的非稳定版本</p>
+<p>建议选择最新的稳定版本进行使用。由于版本较多，为了方便node版本管理，推荐几个工具：</p>
+<ul>
+<li>osx, linux系统下</li>
+</ul>
+<p>推荐使用n和nvm进行node的多版本管理，n是node的一个模块，TJ大神开发的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install -g n</div><div class="line">n 5.0.0</div></pre></td></tr></table></figure>
+<ul>
+<li>windows系统下</li>
+</ul>
+<p>推荐使用nvmw进行node的多版本管理。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 选择一个目录下载nvmw，比如放在C:\Program Files\nvmw</div><div class="line">git clone https://github.com/hakobera/nvmw.git</div><div class="line">// 配置环境变量，在path中增加C:\Program Files\nvmw</div><div class="line">// 运行nvmw命令</div><div class="line">nvmw ls</div><div class="line">nvmw use v5.0.0</div><div class="line">nvmw install v5.0.0</div></pre></td></tr></table></figure>
+<p>不过，这个比较坑，git bash下无法运行，而且，对新版node还不支持</p>
+<h2 id="node初体验"><a href="#node初体验" class="headerlink" title="node初体验"></a>node初体验</h2><h3 id="nodejs的REPL交互环境"><a href="#nodejs的REPL交互环境" class="headerlink" title="nodejs的REPL交互环境"></a>nodejs的REPL交互环境</h3><p>在浏览器中控制台，我们可以直接编写js代码进行运行</p>
+<p>在你的CMD窗口，键入node后回车，即可进入node的repl环境运行js代码。</p>
+<p><a href="http://segmentfault.com/a/1190000002673137" target="_blank" rel="external">更多关于REPL的简单说明戳这里</a></p>
+<h3 id="写个脚本"><a href="#写个脚本" class="headerlink" title="写个脚本"></a>写个脚本</h3><p>代码参见<a href="https://github.com/iUAP-FE/nodejs" target="_blank" rel="external">git仓库</a>。</p>
+<h3 id="起个web服务"><a href="#起个web服务" class="headerlink" title="起个web服务"></a>起个web服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//http.js</div><div class="line"></div><div class="line">var http = require(&apos;http&apos;);</div><div class="line"></div><div class="line">var app = http.createServer(function(req, res)&#123;</div><div class="line">  res.writeHead(200, &#123;&quot;Content-Type&quot;: &quot;text/plain&quot;&#125;);</div><div class="line">  res.end(&quot;Hello world&quot;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(1337);</div></pre></td></tr></table></figure>
+<p>是的，就是这样神奇，短短几行代码，就创建了一个web服务，而且，请不要轻视它，这还是一个高性能的web服务器。</p>
+<h2 id="Nodejs模块概述"><a href="#Nodejs模块概述" class="headerlink" title="Nodejs模块概述"></a>Nodejs模块概述</h2><blockquote>
+<p>nodejs的模块分为提供的核心模块以及我们编写的业务模块</p>
+</blockquote>
+<h3 id="加载模块"><a href="#加载模块" class="headerlink" title="加载模块"></a>加载模块</h3><p>Node.js采用模块化结构，按照CommonJS规范定义和使用模块。模块与文件是一一对应关系，即加载一个模块，实际上就是加载对应的一个模块文件。</p>
+<p>require方法的参数是模块文件的名字。它分成两种情况。</p>
+<p>第一种情况是参数中含有文件路径，这时路径是相对于当前脚本所在的目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myfile = require(&apos;./myfile.js&apos;);</div></pre></td></tr></table></figure>
+<p>第二种情况是参数中不含有文件路径，这时Node到模块的安装目录，去寻找已安装的模块（比如下例）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var gulp = require(&apos;gulp&apos;);</div></pre></td></tr></table></figure>
+<h3 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h3><p>如果只是在服务器运行JavaScript代码，用处并不大，因为服务器脚本语言已经有很多种了。Node.js的用处在于，它本身还提供了一系列功能模块，与操作系统互动。这些核心的功能模块，不用安装就可以使用，下面是它们的清单。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">http：提供HTTP服务器功能。</div><div class="line">url：解析URL。</div><div class="line">fs：与文件系统交互。</div><div class="line">querystring：解析URL的查询字符串。</div><div class="line">child_process：新建子进程。</div><div class="line">util：提供一系列实用小工具。</div><div class="line">path：处理文件路径。</div><div class="line">crypto：提供加密和解密功能，基本上是对OpenSSL的包装。</div></pre></td></tr></table></figure>
+<p>上面这些核心模块，源码都在Node的lib子目录中。为了提高运行速度，它们安装时都会被编译成二进制文件。</p>
+<p>核心模块总是最优先加载的。如果你自己写了一个HTTP模块，<code>require(&#39;http&#39;)</code>加载的还是核心模块。</p>
+<h3 id="自定义模块"><a href="#自定义模块" class="headerlink" title="自定义模块"></a>自定义模块</h3><p>Node模块采用CommonJS规范。只要符合这个规范，就可以自定义模块。</p>
+<p>下面是一个最简单的模块，假定新建一个test.js文件，写入以下内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">module.exports = function(str) &#123;</div><div class="line">    alert(str);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>上面代码就是一个模块，它通过module.exports变量，对外输出一个方法。</p>
+<p>这个模块的使用方法如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var test = require(&apos;./test&apos;);</div><div class="line"></div><div class="line">test(&quot;hello world&quot;);</div></pre></td></tr></table></figure>
+<p>上面代码通过require命令加载模块文件test.js（后缀名省略）。</p>
+<h2 id="commonjs代码规范说明"><a href="#commonjs代码规范说明" class="headerlink" title="commonjs代码规范说明"></a>commonjs代码规范说明</h2><p>也许你对上面的代码有所好奇，所以我们就来简单分析下以上代码。</p>
+<p>首先，Node程序它是由许多个模块组成的，每个模块就是一个文件。Node模块采用了CommonJS规范。</p>
+<p>根据CommonJS规范，一个单独的文件就是一个模块。每一个模块都是一个单独的作用域，也就是说，在一个文件定义的变量（还包括函数和类），都是私有的，对其他文件是不可见的。</p>
+<p>而且，CommonJS规定，每个文件的对外接口是module.exports对象。这个对象的所有属性和方法，都可以被其他文件导入。</p>
+<p>如下，我们来定义一个模块</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> addX = <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> value + x;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 导出变量和方法</span></div><div class="line"><span class="built_in">module</span>.exports.x = x;</div><div class="line"><span class="built_in">module</span>.exports.addX = addX;</div></pre></td></tr></table></figure>
+<p>理解：上面代码通过module.exports对象，定义对外接口，输出变量x和函数addX。module.exports对象是可以被其他文件导入的，它其实就是文件内部与外部通信的桥梁。</p>
+<p>好，继续，我们来引用刚才定义的模块<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> example = <span class="built_in">require</span>(<span class="string">'./example.js'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(example.x); <span class="comment">// 5</span></div><div class="line"><span class="built_in">console</span>.log(addX(<span class="number">1</span>)); <span class="comment">// 6</span></div></pre></td></tr></table></figure></p>
+<h3 id="module对象"><a href="#module对象" class="headerlink" title="module对象"></a>module对象</h3><p>每个模块内部，都有一个module对象，代表当前模块。它有以下属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">module.id 模块的识别符，通常是带有绝对路径的模块文件名。</div><div class="line">module.filename 模块的文件名，带有绝对路径。</div><div class="line">module.loaded 返回一个布尔值，表示模块是否已经完成加载。</div><div class="line">module.parent 返回一个对象，表示调用该模块的模块。</div><div class="line">module.children 返回一个数组，表示该模块要用到的其他模块。</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>module.exports属性<br>module.exports属性表示当前模块对外输出的接口，其他文件加载该模块，实际上就是读取module.exports变量。</p>
+</li>
+<li><p>exports变量<br>为了方便，Node为每个模块提供一个exports变量，指向module.exports。这等同在每个模块头部，有一行这样的命令。</p>
+<h3 id="require命令的解读"><a href="#require命令的解读" class="headerlink" title="require命令的解读"></a>require命令的解读</h3><p>Node.js使用CommonJS模块规范，内置的require命令用于加载模块文件。</p>
+</li>
+</ul>
+<p>require命令的基本功能是，读入并执行一个JavaScript文件，然后返回该模块的exports对象。如果没有发现指定模块，会报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// example.js</div><div class="line">var invisible = function () &#123;</div><div class="line">  console.log(&quot;invisible&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">exports.message = &quot;hi&quot;;</div><div class="line"></div><div class="line">exports.say = function () &#123;</div><div class="line">  console.log(message);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="require加载模块的规则"><a href="#require加载模块的规则" class="headerlink" title="require加载模块的规则"></a>require加载模块的规则</h3><p>require命令用于加载文件，可以加载后缀名为<code>.js</code> <code>.json</code> <code>.node</code>的文件，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var foo = require(&apos;foo&apos;);</div><div class="line">//  等同于</div><div class="line">var foo = require(&apos;foo.js&apos;);</div></pre></td></tr></table></figure></p>
+<p>举例来说，脚本/home/user/projects/foo.js执行了require(‘bar.js’)命令，Node会依次搜索以下文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/usr/local/lib/node/bar.js</div><div class="line">/home/user/projects/node_modules/bar.js</div><div class="line">/home/user/node_modules/bar.js</div><div class="line">/home/node_modules/bar.js</div><div class="line">/node_modules/bar.js</div></pre></td></tr></table></figure></p>
+<p>这样设计的目的是，使得不同的模块可以将所依赖的模块本地化。</p>
+<p>如果指定的模块文件没有发现，Node会尝试为文件名添加.js、.json、.node后，再去搜索。.js件会以文本格式的JavaScript脚本文件解析，.json文件会以JSON格式的文本文件解析，.node文件会以编译后的二进制文件解析。</p>
+<p>require匹配文件的流程图例</p>
+<p><img src="/img/require.jpg" alt=""></p>
+<h2 id="npm包管理器"><a href="#npm包管理器" class="headerlink" title="npm包管理器"></a>npm包管理器</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>npm有两层含义：</p>
+<ul>
+<li>Node.js的开放式模块登记和管理系统，网址为<a href="http://npmjs.org" target="_blank" rel="external">http://npmjs.org</a>。</li>
+<li>Node.js默认的模块管理器，是一个命令行下的软件，用来安装和管理node模块。</li>
+</ul>
+<p>NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：</p>
+<p>允许用户从NPM服务器下载别人编写的第三方包到本地使用。<br>允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。<br>允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。</p>
+<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><p><code>step1.</code> npm作为一个NodeJS的模块管理，我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立<strong>node_global</strong>及<strong>node_cache</strong>两个文件夹。我们就在cmd中键入两行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config set prefix &quot;D:\Program Files\nodejs\node_global&quot;</div><div class="line">npm config set cache &quot;D:\Program Files\nodejs\node_cache&quot;</div></pre></td></tr></table></figure></p>
+<p><code>step2.</code> 下面这一步非常关键，我们需要设置系统变量。进入我的电脑→属性→高级→环境变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">在系统变量下新建“NODE_PATH”</div><div class="line">输入内容“D:\Program Files\nodejs\node_global\node_modules”</div></pre></td></tr></table></figure></p>
+<p><code>step3.</code> 安装bower或是gulp等常用工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install bower gulp -g</div></pre></td></tr></table></figure></p>
+<p>这个时候，你在命令行就可以全局的使用安装的工具了，可以命令行中直接确认<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gulp -v</div><div class="line">bower -v</div></pre></td></tr></table></figure></p>
+<p><code>step4.</code> 接下来我们可以进一步学习如何用npm发布自己的包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">// 初始化一个package</div><div class="line">npm init</div><div class="line">// 添加你的包的管理用户</div><div class="line">npm adduser</div><div class="line">// 发布你的包</div><div class="line">npm publish --tag 0.1.0</div></pre></td></tr></table></figure></p>
+<h3 id="学习使用"><a href="#学习使用" class="headerlink" title="学习使用"></a>学习使用</h3><ol>
+<li><p>npm set<br>npm set用来设置环境变量。</p>
+</li>
+<li><p>npm info<br>npm info命令可以查看每个模块的具体信息</p>
+</li>
+<li><p>npm search<br>npm search命令用于搜索npm仓库，它后面可以跟字符串，也可以跟正则表达式。</p>
+</li>
+<li><p>npm install<br>Node模块采用npm install命令安装。每个模块可以“全局安装”，也可以“本地安装”。两者的差异是模块的安装位置，以及调用方法。</p>
+</li>
+<li><p>npm update<br>npm update 命令可以升级本地安装的模块。</p>
+</li>
+<li><p>npm uninstall<br>卸载掉安装的模块</p>
+</li>
+<li><p>npm publish<br>发布你的包</p>
+</li>
+<li>npm adduser<br>给你的包添加用户信息</li>
+<li>npm cache clear<br>清除缓存</li>
+</ol>
+<h1 id="Chapter-3-–-Nodejs中的对象和核心API"><a href="#Chapter-3-–-Nodejs中的对象和核心API" class="headerlink" title="Chapter 3 – Nodejs中的对象和核心API"></a>Chapter 3 – Nodejs中的对象和核心API</h1><h2 id="node中常用的全局对象"><a href="#node中常用的全局对象" class="headerlink" title="node中常用的全局对象"></a>node中常用的全局对象</h2><blockquote>
+<p>浏览器中运行的js可以访问全局对象window，同样的，在node中运行的js可以访问全局对象global，下面一起了解下在nodejs中都有哪些非常有用的全局对象。</p>
+</blockquote>
+<p><code>global</code>是全局命名空间对象。</p>
+<p>这里需要说明的是，在浏览器中，顶级作用域就是全局作用域。这就是说，在浏览器中，如果当前是在全局作用域内，var something将会声明一个全局变量。在Node中则不同。顶级作用域并非全局作用域，在Node模块里的var something只属于那个模块。</p>
+<h3 id="Console对象"><a href="#Console对象" class="headerlink" title="Console对象"></a>Console对象</h3><p>console 用于提供控制台标准输出，它是由 Internet Explorer 的 JScript 引擎提供的调试工具，后来逐渐成为浏览器的事实标准。 Node.js 沿用了这个标准，提供与习惯行为一致的 console 对象，用于向标准输出流（stdout）或标准错误流（stderr）输出字符。</p>
+<p>console 方法 以下为 console 对象的方法:</p>
+<ul>
+<li>console.log([data][, …]) 向标准输出流打印字符并以换行符结束。该方法接收若干 个参数，如果只有一个参数，则输出这个参数的字符串形式。如果有多个参数，则 以类似于C 语言 printf() 命令的格式输出。</li>
+<li>console.info([data][, …]) P该命令的作用是返回信息性消息，这个命令与console.log差别并不大，除了在chrome中只会输出文字外，其余的会显示一个蓝色的惊叹号。</li>
+<li>console.error([data][, …]) 输出错误消息的。控制台在出现错误时会显示是红色的叉子。</li>
+<li>console.warn([data][, …]) 输出警告消息。控制台出现有黄色的惊叹号。</li>
+<li>console.dir(obj[, options]) 用来对一个对象进行检查（inspect），并以易于阅读和打印的格式显示。</li>
+<li>console.time(label) 输出时间，表示计时开始。</li>
+<li>console.timeEnd(label) 结束时间，表示计时结束。</li>
+<li>console.trace(message[, …]) 当前执行的代码在堆栈中的调用路径，这个测试函数运行很有帮助，只要给想测试的函数里面加入 - console.trace 就行了。</li>
+<li>console.assert(value[, message][, …]) 用于判断某个表达式或变量是否为真，接手两个参数，第一个参数是表达式，第二个参数是字符串。只有当第一个参数为false，才会输出第二个参数，否则不会有任何结果。</li>
+<li>console.log()：向标准输出流打印字符并以换行符结束。 console.log 接受若干 个参数，如果只有一个参数，则输出这个参数的字符串形式。如果有多个参数，则 以类似于C 语言 printf() 命令的格式输出。 第一个参数是一个字符串，如果没有 参数，只打印一个换行。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">console.log(&apos;Hello world&apos;);</div><div class="line">console.log(&apos;byvoid%diovyb&apos;);</div><div class="line">console.log(&apos;byvoid%diovyb&apos;, 1991);</div><div class="line">console.error()：与console.log() 用法相同，只是向标准错误流输出。 console.trace()：向标准错误流输出当前的调用栈。</div></pre></td></tr></table></figure>
+<h3 id="Buffer对象"><a href="#Buffer对象" class="headerlink" title="Buffer对象"></a>Buffer对象</h3><p>Buffer对象Node原生提供的全局对象，用来处理二进制数据的一个接口。JavaScript比较擅长处理Unicode数据，对于处理二进制格式的数据（比如TCP数据流），就不太擅长。Buffer对象就是为了解决这个问题而提供的。该对象也是一个构造函数，它的实例代表了V8引擎分配的一段内存，基本上是一个数组，成员都为整数值。</p>
+<blockquote>
+<p>API说明</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123; [<span class="built_in">Function</span>: Buffer]</div><div class="line">  poolSize: <span class="number">8192</span>,</div><div class="line">  isBuffer: [<span class="built_in">Function</span>: isBuffer],</div><div class="line">  compare: [<span class="built_in">Function</span>: compare],</div><div class="line">  isEncoding: [<span class="built_in">Function</span>],</div><div class="line">  concat: [<span class="built_in">Function</span>],</div><div class="line">  byteLength: [<span class="built_in">Function</span>: byteLength] &#125;</div></pre></td></tr></table></figure>
+<p>暂时存放的一块内存，处理二进制类型文件<br>创建buffer有三种办法：</p>
+<ul>
+<li><code>new Buffer(size)</code>指定长度，然后fill填充内容</li>
+<li><code>new Buffer([&#39;sss&#39;, &#39;xxx&#39;])</code>传入一个数组</li>
+<li><code>new Buffer(&#39;郭永峰&#39;)</code>传入一个字符串</li>
+</ul>
+<h3 id="几个重要的模块内部的局部变量"><a href="#几个重要的模块内部的局部变量" class="headerlink" title="几个重要的模块内部的局部变量"></a>几个重要的模块内部的局部变量</h3><p>模块内部的局部变量，指向的对象根据模块不同而不同，但是所有模块都适用，可以看作是伪全局变量， 主要为<strong>filename,</strong>dirname,module, module.exports, exports等。</p>
+<p><strong>__filename</strong><br>注意此属性并不是全局对象的属性，而只是node在我们注入模块的参数，可以在模块内直接使用. _filename 表示当前正在执行的脚本的文件名。它将输出文件所在位置的绝对路径</p>
+<p> // 输出全局变量 <strong>filename 的值<br> console.log( </strong>filename );<br><strong>__dirname</strong><br>注意此属性并不是全局对象的属性，而只是node为我们注入模块的参数，可以在模块内直接使用. __dirname 表示当前执行脚本所在的目录。</p>
+<p>// 输出全局变量 <strong>dirname 的值<br>console.log( </strong>dirname );<br><strong>module</strong><br>代表当前模块本身</p>
+<p><strong>exports</strong><br>模块的导出对象</p>
+<h3 id="path对象"><a href="#path对象" class="headerlink" title="path对象"></a>path对象</h3><p>path.join方法用于连接路径。该方法的主要用途在于，会正确使用当前系统的路径分隔符，Unix系统是”/“，Windows系统是”\“。</p>
+<p>API接口有：<code>normalize</code> <code>join</code> <code>resolve</code> <code>parse</code> <code>dirname</code> <code>basename</code> `</p>
+<p><strong>path.resolve()</strong>：一个重要的方法</p>
+<p>path.resolve方法用于将相对路径转为绝对路径。</p>
+<p>它可以接受多个参数，依次表示所要进入的路径，直到将最后一个参数转为绝对路径。如果根据参数无法得到绝对路径，就以当前所在路径作为基准。除了根目录，该方法的返回值都不带尾部的斜杠。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 格式</div><div class="line">path.resolve([from ...], to)</div><div class="line"></div><div class="line">// 实例</div><div class="line">path.resolve(&apos;foo/bar&apos;, &apos;/tmp/file/&apos;, &apos;..&apos;, &apos;a/../subfile&apos;)</div></pre></td></tr></table></figure>
+<p>上面代码的实例，执行效果类似下面的命令。</p>
+<p>bash</p>
+<p>$ cd foo/bar<br>$ cd /tmp/file/<br>$ cd ..<br>$ cd a/../subfile<br>$ pwd</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">path.resolve(&apos;/foo/bar&apos;, &apos;./baz&apos;)</div><div class="line">// &apos;/foo/bar/baz&apos;</div><div class="line"></div><div class="line">path.resolve(&apos;/foo/bar&apos;, &apos;/tmp/file/&apos;)</div><div class="line">// &apos;/tmp/file&apos;</div><div class="line"></div><div class="line">path.resolve(&apos;wwwroot&apos;, &apos;static_files/png/&apos;, &apos;../gif/image.gif&apos;)</div><div class="line">// 如果当前目录是/home/myself/node，返回</div><div class="line">// /home/myself/node/wwwroot/static_files/gif/image.gif</div><div class="line">该方法忽略非字符串的参数。</div></pre></td></tr></table></figure>
+<h3 id="stream流对象"><a href="#stream流对象" class="headerlink" title="stream流对象"></a>stream流对象</h3><p>Stream把较大的数据，拆成很小的部分。只要命令部署了Stream接口，就可以把一个流的输出接到另一个流的输入。Node引入了这个概念，通过Stream为异步读写数据提供的统一接口。无论是硬盘数据、网络数据，还是内存数据，都可以采用这个接口读写。</p>
+<p>后面接触的文件系统fs就是基于stream来实现，比较常用的构建工具gulp也是基于流来工作的。</p>
+<p>一个典型的写文件操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line"></div><div class="line">var server = http.createServer(function (req, res) &#123;</div><div class="line">  fs.readFile(__dirname + &apos;/data.txt&apos;, function (err, data) &#123;</div><div class="line">    res.end(data);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">server.listen(8000);</div></pre></td></tr></table></figure>
+<p>Stream接口分成三类。</p>
+<ul>
+<li>可读数据流接口，用于读取数据。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var Readable = require(&apos;stream&apos;).Readable;</div><div class="line"></div><div class="line">var rs = new Readable; rs.push(&apos;beep &apos;); rs.push(&apos;boop\n&apos;); rs.push(null);</div><div class="line"></div><div class="line">rs.pipe(process.stdout);</div></pre></td></tr></table></figure>
+<ul>
+<li>可写数据流接口，用于写入数据。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;); var readableStream = fs.createReadStream(&apos;file1.txt&apos;); var writableStream = fs.createWriteStream(&apos;file2.txt&apos;);</div><div class="line"></div><div class="line">readableStream.setEncoding(&apos;utf8&apos;);</div><div class="line"></div><div class="line">readableStream.on(&apos;data&apos;, function(chunk) &#123; writableStream.write(chunk); &#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>双向数据流接口，用于读取和写入数据，比如Node的tcp、sockets、zlib、crypto都部署了这个接口。</li>
+</ul>
+<h3 id="process"><a href="#process" class="headerlink" title="process"></a>process</h3><p>API接口：argv pid kill stdout stderr strin console nextTick 等</p>
+<p>process 是一个全局变量，即 global 对象的属性。 它用于描述当前Node.js 进程状态的对象，提供了一个与操作系统的简单接口。通常在你写本地命令行程序的时候，少不了要 和它打交道。下面将会介绍 process 对象的一些最常用的成员方法。</p>
+<p><strong>process.arg</strong><br>是命令行参数数组，第一个元素是node.exe可执行文件的路径,第二个参数是执行的脚本文件所有路径，从第三个元素开始每个参数是一个运行时传入的参数</p>
+<p>console.log(process.argv);<br>以将上代码保存为argv.js,然后运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">E:\nodejs\test&gt;node argv.js test input</div></pre></td></tr></table></figure>
+<p>得到结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[ &apos;C:\\Program Files\\nodejs\\node.exe&apos;,</div><div class="line">  &apos;E:\\testjus\\argv.js&apos;,</div><div class="line">  &apos;test&apos;,</div><div class="line">  &apos;input&apos; ]</div></pre></td></tr></table></figure>
+<p><strong>process.stdout</strong><br>标准输出流，通常我们使用的console.log往标准输出打印字符，其实调用的就是process.stdout.write()函数</p>
+<p><strong>process.stdin</strong><br>标准输入流，初始时它是暂停的，要想从标准输入读取数据，必须恢复流，并手动编写流的事件响应函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">process.stdin.resume();</div><div class="line"></div><div class="line">process.stdin.on(&apos;data&apos;,function(data)&#123;</div><div class="line">  process.stdout.write(&apos;从控制台读入用户输入的字符&apos;+data.toString());</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="学习node中的核心模块"><a href="#学习node中的核心模块" class="headerlink" title="学习node中的核心模块"></a>学习node中的核心模块</h2><h3 id="Fs模块"><a href="#Fs模块" class="headerlink" title="Fs模块"></a>Fs模块</h3><p>fs是filesystem的缩写，该模块提供本地文件的读写能力，基本上是POSIX文件操作命令的简单包装。但是，这个模块几乎对所有操作提供异步和同步两种操作方式，供开发者选择。</p>
+<p>readFileSync()<br>readFileSync方法用于同步读取文件，返回一个字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var text = fs.readFileSync(fileName, &quot;utf8&quot;);</div><div class="line"></div><div class="line">// 将文件按行拆成数组</div><div class="line">text.split(/\r?\n/).forEach(function (line) &#123;</div><div class="line">  // ...</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>writeFileSync()<br>writeFileSync方法用于同步写入文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fs.writeFileSync(fileName, str, &apos;utf8&apos;);</div></pre></td></tr></table></figure>
+<p>mkdir()，writeFile()，readfile()<br>mkdir方法用于新建目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line"></div><div class="line">fs.mkdir(&apos;./helloDir&apos;,0777, function (err) &#123;</div><div class="line">  if (err) throw err;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>mkdir接受三个参数，第一个是目录名，第二个是权限值，第三个是回调函数。</p>
+<p>writeFile方法用于写入文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line"></div><div class="line">fs.writeFile(&apos;./helloDir/message.txt&apos;, &apos;Hello Node&apos;, function (err) &#123;</div><div class="line">  if (err) throw err;</div><div class="line">  console.log(&apos;文件写入成功&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>readfile方法用于读取文件内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line"></div><div class="line">fs.readFile(&apos;./helloDir/message.txt&apos;,&apos;UTF-8&apos; ,function (err, data) &#123;</div><div class="line">  if (err) throw err;</div><div class="line">  console.log(data);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>上面代码使用readFile方法读取文件。readFile方法的第一个参数是文件名，第二个参数是文件编码，第三个参数是回调函数。可用的文件编码包括“ascii”、“utf8”和“base64”。如果没有指定文件编码，返回的是原始的缓存二进制数据，这时需要调用buffer对象的toString方法，将其转为字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line">fs.readFile(&apos;example_log.txt&apos;, function (err, logData) &#123;</div><div class="line">  if (err) throw err;</div><div class="line">  var text = logData.toString();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>readFile方法是异步操作，所以必须小心，不要同时发起多个readFile请求。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for(var i = 1; i &lt;= 1000; i++) &#123;</div><div class="line">  fs.readFile(&apos;./&apos;+i+&apos;.txt&apos;, function() &#123;</div><div class="line">     // do something with the file</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面代码会同时发起1000个readFile异步请求，很快就会耗尽系统资源。</p>
+<h3 id="Http模块"><a href="#Http模块" class="headerlink" title="Http模块"></a>Http模块</h3><p>Http模块主要用于搭建HTTP服务。使用Node.js搭建HTTP服务器非常简单。</p>
+<ul>
+<li>处理GET请求</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var http = require(&quot;http&quot;);</div><div class="line"></div><div class="line">http.createServer(function(req, res) &#123;</div><div class="line"></div><div class="line">// 主页</div><div class="line">if (req.url == &quot;/&quot;) &#123;</div><div class="line">  res.writeHead(200, &#123; &quot;Content-Type&quot;: &quot;text/html&quot; &#125;);</div><div class="line">  res.end(&quot;Welcome to the homepage!&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// About页面</div><div class="line">else if (req.url == &quot;/about&quot;) &#123;</div><div class="line">  res.writeHead(200, &#123; &quot;Content-Type&quot;: &quot;text/html&quot; &#125;);</div><div class="line">  res.end(&quot;Welcome to the about page!&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 404错误</div><div class="line">else &#123;</div><div class="line">  res.writeHead(404, &#123; &quot;Content-Type&quot;: &quot;text/plain&quot; &#125;);</div><div class="line">  res.end(&quot;404 error! File not found.&quot;);</div><div class="line">&#125;</div><div class="line">&#125;).listen(8080, &quot;localhost&quot;);</div></pre></td></tr></table></figure>
+<p>上面代码第一行var http = require(“http”)，表示加载http模块。然后，调用http模块的createServer方法，创造一个服务器实例，将它赋给变量http。</p>
+<p>ceateServer方法接受一个函数作为参数，该函数的request参数是一个对象，表示客户端的HTTP请求；response参数也是一个对象，表示服务器端的HTTP回应。response.writeHead方法表示，服务器端回应一个HTTP头信息；response.end方法表示，服务器端回应的具体内容，以及回应完成后关闭本次对话。最后的listen(8080)表示启动服务器实例，监听本机的8080端口。</p>
+<p>将上面这几行代码保存成文件app.js，然后用node调用这个文件，服务器就开始运行了。</p>
+<ul>
+<li>处理POST请求</li>
+</ul>
+<p>当客户端采用POST方法发送数据时，服务器端可以对data和end两个事件，设立监听函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line"></div><div class="line">http.createServer(function (req, res) &#123; var content = &quot;&quot;;</div><div class="line"></div><div class="line">req.on(&apos;data&apos;, function (chunk) &#123;</div><div class="line">  content += chunk;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">req.on(&apos;end&apos;, function () &#123;</div><div class="line">  res.writeHead(200, &#123;&quot;Content-Type&quot;: &quot;text/plain&quot;&#125;);</div><div class="line">  res.write(&quot;You&apos;ve sent: &quot; + content);</div><div class="line">  res.end();</div><div class="line">&#125;);</div><div class="line">&#125;).listen(8080);</div></pre></td></tr></table></figure>
+<p><strong>模块属性</strong></p>
+<p>（1）HTTP请求的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">headers：HTTP请求的头信息。</div><div class="line">url：请求的路径。</div></pre></td></tr></table></figure>
+<p><strong>模块方法</strong></p>
+<p>（1）http模块的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">createServer(callback)：创造服务器实例。</div></pre></td></tr></table></figure>
+<p>（2）服务器实例的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">listen(port)：启动服务器监听指定端口。</div></pre></td></tr></table></figure>
+<p>（3）HTTP回应的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setHeader(key, value)：指定HTTP头信息。</div><div class="line">write(str)：指定HTTP回应的内容。</div><div class="line">end()：发送HTTP回应。</div></pre></td></tr></table></figure>
+<h3 id="Events模块和异步编程"><a href="#Events模块和异步编程" class="headerlink" title="Events模块和异步编程"></a>Events模块和异步编程</h3><p>Events模块是node.js对“发布/订阅”模式（publish/subscribe）的部署。一个对象通过这个模块，向另一个对象传递消息。该模块通过EventEmitter属性，提供了一个构造函数。该构造函数的实例具有on方法，可以用来监听指定事件，并触发回调函数。任意对象都可以发布指定事件，被EventEmitter实例的on方法监听到。</p>
+<p>下面是一个实例，先建立一个消息中心，然后通过on方法，为各种事件指定回调函数，从而将程序转为事件驱动型，各个模块之间通过事件联系。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var EventEmitter = require(&quot;events&quot;).EventEmitter;</div><div class="line"></div><div class="line">var ee = new EventEmitter();</div><div class="line">ee.on(&quot;someEvent&quot;, function () &#123;</div><div class="line">  console.log(&quot;event has occured&quot;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ee.emit(&quot;someEvent&quot;);</div></pre></td></tr></table></figure>
+<p>Events模块的作用，还在于其他模块可以部署EventEmitter接口，从而也能够订阅和发布消息。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var EventEmitter = require(&apos;events&apos;).EventEmitter;</div><div class="line"></div><div class="line">function Dog(name) &#123;</div><div class="line">  this.name = name;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Dog.prototype.__proto__ = EventEmitter.prototype;</div><div class="line">// 另一种写法</div><div class="line">// Dog.prototype = Object.create(EventEmitter.prototype);</div><div class="line"></div><div class="line">var simon = new Dog(&apos;simon&apos;);</div><div class="line"></div><div class="line">simon.on(&apos;bark&apos;, function()&#123;</div><div class="line">  console.log(this.name + &apos; barked&apos;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">setInterval(function()&#123;</div><div class="line">  simon.emit(&apos;bark&apos;);</div><div class="line">&#125;, 500);</div></pre></td></tr></table></figure>
+<p>上面代码新建了一个构造函数Dog，然后让其继承EventEmitter，因此Dog就拥有了EventEmitter的接口。最后，为Dog的实例指定bark事件的监听函数，再使用EventEmitter的emit方法，触发bark事件。</p>
+<h1 id="Chapter-4-–-Node-js开发实战"><a href="#Chapter-4-–-Node-js开发实战" class="headerlink" title="Chapter 4 – Node.js开发实战"></a>Chapter 4 – Node.js开发实战</h1><blockquote>
+<p>导读：通过对express、jade、angular、mongodb等技术结合的一个示例代码，和大家分享涉及的技术点。</p>
+</blockquote>
+<h2 id="express的使用"><a href="#express的使用" class="headerlink" title="express的使用"></a>express的使用</h2><h3 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h3><p>基于 Node.js 平台，快速、开放、极简的 web 开发框架。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install express express-generator -g</div></pre></td></tr></table></figure>
+<h3 id="生成项目脚手架代码"><a href="#生成项目脚手架代码" class="headerlink" title="生成项目脚手架代码"></a>生成项目脚手架代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">express myapp</div></pre></td></tr></table></figure>
+<h2 id="ejs"><a href="#ejs" class="headerlink" title="ejs"></a>ejs</h2><p>jade本身是基于nodejs开发的模板引擎</p>
+<h2 id="angular"><a href="#angular" class="headerlink" title="angular"></a>angular</h2><p>angular是一个前端MVC框架，在这里会和大家简单介绍基于nodejs的项目对angular的使用</p>
+<h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>mongodb是目前流行的noSQL数据库，因其简单实用而流行。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Chapter-1-–-Node-js入门知识&quot;&gt;&lt;a href=&quot;#Chapter-1-–-Node-js入门知识&quot; class=&quot;headerlink&quot; title=&quot;Chapter 1 – Node.js入门知识&quot;&gt;&lt;/a&gt;Chapter 1 – Node.js入门知识&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;导读：在这一部分的内容里，主要会简单介绍一下什么是Node.js，它有哪些用武之地，我们为什么要去学习它。另外，还会简单的讨论下Nodejs的优缺点以及适用场景。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;基本介绍&quot;&gt;&lt;a href=&quot;#基本介绍&quot; class=&quot;headerlink&quot; title=&quot;基本介绍&quot;&gt;&lt;/a&gt;基本介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。Node.js 的包管理器 npm，是全球最大的开源库生态系统。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以上提到的&lt;strong&gt;运行环境&lt;/strong&gt;，我们可以这样理解：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JS本身是脚本语言，脚本语言都需要一个解析器才能运行。对于写在HTML页面里的JS，浏览器充当了解析器的角色。&lt;br&gt;而对于需要独立运行的JS，NodeJS就是一个解析器，是JS语言的服务器运行环境，使其流畅的运行于服务器端。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="NODE" scheme="http://pengfei6.github.io/categories/NODE/"/>
+    
+    
+      <category term="node" scheme="http://pengfei6.github.io/tags/node/"/>
+    
       <category term="JavaScript" scheme="http://pengfei6.github.io/tags/JavaScript/"/>
+    
+      <category term="Node" scheme="http://pengfei6.github.io/tags/Node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack入门及实践</title>
+    <link href="http://pengfei6.github.io/2016/01/20/webpack%E5%85%A5%E9%97%A8%E5%8F%8A%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://pengfei6.github.io/2016/01/20/webpack入门及实践/</id>
+    <published>2016-01-20T12:16:14.000Z</published>
+    <updated>2016-09-20T14:59:31.763Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Webpack和React小书"><a href="#Webpack和React小书" class="headerlink" title="Webpack和React小书"></a>Webpack和React小书</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这本小书的目的是引导你进入 React 和 Webpack 的世界。他们两个都是非常有用的技术，如果同时使用他们，前端开发会更加有趣。</p>
+<p>这本小书会提供所有相关的技能。如果你只是对 React 感兴趣，那可以跳过 Webpack 相关的内容，反之亦然。 如果想学习更多的相关知识可以移步 SurviveJS - Webpack and React。<br><a id="more"></a></p>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>React 是一个能够让开发模块变成简单的库。一旦你理解他的工作原理，那你就可以用它搭建自己的程序，这是不同类似 Angular 那种试着包揽一切的框架不同的地方。</p>
+<p>如果你想很快过一遍 React 的知识点，那么 React 官方教程 是一个很好的开始。</p>
+<p>可能 React 最有趣的事是它一直会尝试调整传统的 web 组件的思路。它让我们重新思考关注点的分离。它（React Native）也会影响 App 开发。 React Native 提供了一种使用 Javascript 开发原生应用同时保证了原生性能。</p>
+<h3 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h3><p>Webpack 非常容易操作，它是一个模块合并的工具，本质就是一个能够把各种组件（HTML，CSS，JS）构建成项目。最方便的是你只需要初始化配置一次，Webpack 会替你做那些繁琐的事情，同时也保证了让你可以在项目中混合使用各种技术而不头疼。</p>
+<p>如果你在 Webpack 方面完全是新手的，但想开始一个简单的教程的话，可以去 Pete Hunt’s guide。你可以在那里学习到一些基础的使用，这里只是那边的一个补充。</p>
+<h2 id="介绍-Webpack"><a href="#介绍-Webpack" class="headerlink" title="介绍 Webpack"></a>介绍 Webpack</h2><p>在 Web 开发历程上，我们构建了很多小型的技术解决方案，比如用 HTML 去描述页面结构，CSS 去描述页面样式，Javascript 去描述页面逻辑，或者你也可以用一些比如 Jade 去取代 HTML，用 Sass 或 Less 去取代CSS，用 CoffeeScript 或者 TypeScript 之类的去取代 Javascript，不过项目中的依赖可能是一件比较烦恼的事情。（需要安装额外很多的库）</p>
+<p>这里有很多为什么我们需要尝试那些新技术的理由。不管我们用什么，总之，我们还是希望使用那些能够处理在浏览器端的方案，所以出来了编译方案。历史上已经有很多分享了，比如 Make 可能是很多解决方案中最知名且是可行的方案。Grunt 和 Gulp 是在是前端的世界中最流行的解决方案，他们两个都有很多非常有用的插件。NPM（Node.js 的包管理器）则包含了他们两个。</p>
+<h3 id="Grunt"><a href="#Grunt" class="headerlink" title="Grunt"></a>Grunt</h3><p>Grunt 是相比后面几个更早的项目，他依赖于各种插件的配置。这是一个很好的解决方案，但是请相信我，你不会想看到一个 300 行的 Gruntfile。如果你好奇 Grunt 的配置会如何，那么这里是有个从 Grunt 文档 的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">module.exports = function(grunt) &#123;</div><div class="line"></div><div class="line">  grunt.initConfig(&#123;</div><div class="line">    jshint: &#123;</div><div class="line">      files: [&apos;Gruntfile.js&apos;, &apos;src/**/*.js&apos;, &apos;test/**/*.js&apos;],</div><div class="line">      options: &#123;</div><div class="line">        globals: &#123;</div><div class="line">          jQuery: true</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    watch: &#123;</div><div class="line">      files: [&apos;&lt;%= jshint.files %&gt;&apos;],</div><div class="line">      tasks: [&apos;jshint&apos;]</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  grunt.loadNpmTasks(&apos;grunt-contrib-jshint&apos;);</div><div class="line">  grunt.loadNpmTasks(&apos;grunt-contrib-watch&apos;);</div><div class="line"></div><div class="line">  grunt.registerTask(&apos;default&apos;, [&apos;jshint&apos;]);</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="Gulp"><a href="#Gulp" class="headerlink" title="Gulp"></a>Gulp</h3><p>Gulp 提供了一个不一样的解决方案，而不是依赖于各种插件的配置。Gulp 使用了一个文件流的概念。如果你熟悉 Unix，那么 Gulp 对你来说会差不多，Gulp 会提供你一些简单化的操作。在这个解决方案中，是去匹配一些文件然后操作（就是说和 JavaScript 相反）然后输出结果（比如输出在你设置的编译路径等）。这里有一个简单的 Gulpfile 的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var coffee = require(&apos;gulp-coffee&apos;);</div><div class="line">var concat = require(&apos;gulp-concat&apos;);</div><div class="line">var uglify = require(&apos;gulp-uglify&apos;);</div><div class="line">var sourcemaps = require(&apos;gulp-sourcemaps&apos;);</div><div class="line">var del = require(&apos;del&apos;);</div><div class="line"></div><div class="line">var paths = &#123;</div><div class="line">  scripts: [&apos;client/js/**/*.coffee&apos;, &apos;!client/external/**/*.coffee&apos;],</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// 不是所有的任务需要使用 streams</div><div class="line">// 一个 gulpfile 只是另一个node的程序，所以你可以使用所有 npm 的包</div><div class="line">gulp.task(&apos;clean&apos;, function(cb) &#123;</div><div class="line">  // 你可以用 `gulp.src` 来使用多重通配符模式</div><div class="line">  del([&apos;build&apos;], cb);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(&apos;scripts&apos;, [&apos;clean&apos;], function() &#123;</div><div class="line">  // 压缩和复制所有 JavaScript （除了第三方库）</div><div class="line">  // 加上 sourcemaps</div><div class="line">  return gulp.src(paths.scripts)</div><div class="line">    .pipe(sourcemaps.init())</div><div class="line">      .pipe(coffee())</div><div class="line">      .pipe(uglify())</div><div class="line">      .pipe(concat(&apos;all.min.js&apos;))</div><div class="line">    .pipe(sourcemaps.write())</div><div class="line">    .pipe(gulp.dest(&apos;build/js&apos;));</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 监听文件修改</div><div class="line">gulp.task(&apos;watch&apos;, function() &#123;</div><div class="line">  gulp.watch(paths.scripts, [&apos;scripts&apos;]);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 默认任务（就是你在命令行输入 `gulp` 时运行）</div><div class="line">gulp.task(&apos;default&apos;, [&apos;watch&apos;, &apos;scripts&apos;]);</div></pre></td></tr></table></figure>
+<p>这些配置都是代码，所以当你遇到问题也可以修改，你也可以使用已经存在的 Gulp 插件，但是你还是需要写一堆模板任务。</p>
+<h3 id="Browserify"><a href="#Browserify" class="headerlink" title="Browserify"></a>Browserify</h3><p>处理 Javascript 模块一直是一个大问题，因为这个语言在 ES6 之前没有这方面的概念。因此我们还是停留在90年代，各种解决方案，比如提出了 AMD。在实践中只使用 CommonJS （ Node.js 所采用的格式）会比较有帮助，而让工具去处理剩下的事情。它的优势是你可以发布到 NPM 上来避免重新发明轮子。</p>
+<p>Browserify 解决了这个问题，它提供了一种可以把模块集合到一起的方式。你可以用 Gulp 调用它，此外有很多转换小工具可以让你更兼容的使用（比如 watchify 提供了一个文件监视器帮助你在开发过程中更加自动化地把文件合并起来），这样会省下很多精力。毋庸置疑，一定程度来讲，这是一个很好的解决方案。</p>
+<h3 id="Webpack-1"><a href="#Webpack-1" class="headerlink" title="Webpack"></a>Webpack</h3><p>Webpack 扩展了 CommonJs 的 require 的想法，比如你想在 CoffeeScript、Sass、Markdown 或者其他什么代码中 require 你想要的任何代码的话？那么 Webpack 正是做这方面的工作。它会通过配置来取出代码中的依赖，然后把他们通过加载器把代码兼容地输出到静态资源中。这里是一个 Webpack 官网 上的例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">    entry: &quot;./entry.js&quot;,</div><div class="line">    output: &#123;</div><div class="line">        path: __dirname,</div><div class="line">        filename: &quot;bundle.js&quot;</div><div class="line">    &#125;,</div><div class="line">    module: &#123;</div><div class="line">        loaders: [</div><div class="line">            &#123; test: /\.css$/, loader: &quot;style!css&quot; &#125;</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>在接下来的章节中我们会使用 Webpack 来构建项目来展示它的能力。你可以用其他工具和 Webpack 一起使用。它不会解决所有事情，只是解决一个打包的难题，无论如何，这是在开发过程中需要解决的问题。</p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>在开始之前，你需要把你的 Node.js 和 NPM 都更新到最新的版本。访问 nodejs.org 查看安装详情。我们将会使用 NPM 安装一些工具。<br>开始使用 Webpack 非常简单，我会展示给你看使用它的一个简单的项目。第一步，为你的项目新建一个文件夹，然后输入 npm init，然后填写相关问题。这样会为你创建了 package.json，不用担心填错，你可以之后修改它。</p>
+<h3 id="安装-Webpack"><a href="#安装-Webpack" class="headerlink" title="安装 Webpack"></a>安装 Webpack</h3><p>接下来我们安装 Webpack，我们要把它安装在本地，然后把它作为项目依赖保存下来。这样你可以在任何地方编译（服务端编译之类的）。输入 npm i wepack –save-dev。如果你想运行它，就输入 node_modules/.bin/webpack。</p>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>项目的目录结构长这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">/app</div><div class="line"></div><div class="line">main.js</div><div class="line">component.js</div><div class="line">/build</div><div class="line"></div><div class="line">bundle.js (自动创建)</div><div class="line">index.html</div><div class="line">package.json</div><div class="line">webpack.config.js</div></pre></td></tr></table></figure></p>
+<p>我们会使用 Webpack 在我们的 /app 里来自动创建 bundle.js 。接下来，我们来设置</p>
+<p>webpack.config.js。</p>
+<h3 id="设置-Webpack"><a href="#设置-Webpack" class="headerlink" title="设置 Webpack"></a>设置 Webpack</h3><p>Webpack 的配置文件长这样：</p>
+<p>webpack.config.js</p>
+<p>var path = require(‘path’);</p>
+<p>module.exports = {<br>    entry: path.resolve(<strong>dirname, ‘app/main.js’),<br>    output: {<br>        path: path.resolve(</strong>dirname, ‘build’),<br>        filename: ‘bundle.js’,<br>    },<br>};<br>运行你的第一个编译</p>
+<p>现在我们有了一个最简单的配置，我们需要有什么东西去编译，让我们开始一个经典的 Hello World，设置 /app 像这样：</p>
+<p>app/component.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line"></div><div class="line"></div><div class="line">module.exports = function () &#123;</div><div class="line">    var element = document.createElement(&apos;h1&apos;);</div><div class="line"></div><div class="line">    element.innerHTML = &apos;Hello world&apos;;</div><div class="line"></div><div class="line">    return element;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>app/main.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;;</div><div class="line">var component = require(&apos;./component.js&apos;);</div><div class="line"></div><div class="line"></div><div class="line">document.body.appendChild(component());</div></pre></td></tr></table></figure></p>
+<p>现在在你的命令行运行 webpack，然后你的应用会开始编译，一个 bundle.js 文件就这样出现在你的 /build 文件夹下，需要在 build/ 下的 index.html 去启动项目。</p>
+<p>build/index.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;/&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>这个文件可以用 html-webpack-plugin 来生成。如果你觉得冒险，那就把剩下的工具交给它来做。使用它就只有一个配置的问题。一般来说使用 Webpack 来工作就是这么个套路。</p>
+<h3 id="运行应用"><a href="#运行应用" class="headerlink" title="运行应用"></a>运行应用</h3><p>只要双击 index.html 或者设置一个 Web 服务指向 build/ 文件夹。</p>
+<h3 id="设置-package-json-scripts"><a href="#设置-package-json-scripts" class="headerlink" title="设置 package.json scripts"></a>设置 package.json scripts</h3><p>npm 是一个非常好用的用来编译的指令，通过 npm 你可以不用去担心项目中使用了什么技术，你只要调用这个指令就可以了，只要你在 package.json 中设置 scripts 的值就可以了。</p>
+<p>在这个案例中我们把编译步骤放到 npm run build 中是这样：</p>
+<p>npm i webpack –save - 如果你想要把 Webpack 作为一个项目的开发依赖，就可以使用 –save-dev，这样就非常方便地让你在开发一个库的时候，不会依赖工具（但不是个好方法！）。<br>把下面的内容添加到 package.json中。<br>  “scripts”: {<br>    “build”: “webpack”<br>  }<br>现在你可以输入 npm run build 就可以编译了。</p>
+<p>当项目越发复杂的时候，这样的方法会变得越来越有效。你可以把所有复杂的操作隐藏在 scripts 里面来保证界面的简洁。</p>
+<p>不过潜在的问题是这种方法会导致如果你使用一些特殊的指令的时候只能在 Unix 环境中使用。所以如果你需要考虑一些未知的环境中的话，那么 gulp-webpack 会是一个好的解决方案。</p>
+<p>注意 NPM 会找到 Webpack，npm run 会把他临时加到 PATH来让我们这个神奇的命令工作。</p>
+<h2 id="工作流"><a href="#工作流" class="headerlink" title="工作流"></a>工作流</h2><p>如果需要一直输入 npm run build 确实是一件非常无聊的事情，幸运的是，我们可以把让他安静的运行，让我们设置 webpack-dev-server。</p>
+<h3 id="设置-webpack-dev-server"><a href="#设置-webpack-dev-server" class="headerlink" title="设置 webpack-dev-server"></a>设置 webpack-dev-server</h3><p>第一步，输入 npm i webpack-dev-server –save，此外，我们需要去调整 package.json scripts 部分去包含这个指令，下面是基本的设置：</p>
+<p>package.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;scripts&quot;: &#123;</div><div class="line">    &quot;build&quot;: &quot;webpack&quot;,</div><div class="line">    &quot;dev&quot;: &quot;webpack-dev-server --devtool eval --progress --colors --hot --content-base build&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当你在命令行里运行 npm run dev 的时候他会执行 dev 属性里的值。这是这些指令的意思：</p>
+<p>webpack-dev-server - 在 localhost:8080 建立一个 Web 服务器<br>–devtool eval - 为你的代码创建源地址。当有任何报错的时候可以让你更加精确地定位到文件和行号<br>–progress - 显示合并代码进度<br>–colors - Yay，命令行中显示颜色！<br>–content-base build - 指向设置的输出目录<br>总的来说，当你运行 npm run dev 的时候，会启动一个 Web 服务器，然后监听文件修改，然后自动重新合并你的代码。真的非常简洁！</p>
+<p>访问 <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 你会看到效果。</p>
+<h2 id="浏览器自动刷新"><a href="#浏览器自动刷新" class="headerlink" title="浏览器自动刷新"></a>浏览器自动刷新</h2><p>当运行 webpack-dev-server 的时候，它会监听你的文件修改。当项目重新合并之后，会通知浏览器刷新。为了能够触发这样的行为，你需要把你的 index.html 放到 build/ 文件夹下，然后做这样的修改：</p>
+<p>build/index.html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">  &lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;/&gt;</div><div class="line">  &lt;/head&gt;</div><div class="line">  &lt;body&gt;</div><div class="line">    &lt;script src=&quot;http://localhost:8080/webpack-dev-server.js&quot;&gt;&lt;/script&gt;</div><div class="line">    &lt;script src=&quot;bundle.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>我们需要增加一个脚本当发生改动的时候去自动刷新应用，你需要在配置中增加一个入口点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line"></div><div class="line">module.exports = &#123;</div><div class="line">    entry: [&apos;webpack/hot/dev-server&apos;, path.resolve(__dirname, &apos;app/main.js&apos;)],</div><div class="line">    output: &#123;</div><div class="line">        path: path.resolve(__dirname, &apos;build&apos;),</div><div class="line">        filename: &apos;bundle.js&apos;,</div><div class="line">    &#125;,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>就是这样！现在你的应用就可以在文件修改之后自动刷新了。</p>
+<h3 id="默认环境"><a href="#默认环境" class="headerlink" title="默认环境"></a>默认环境</h3><p>在上面的例子中我们创建了 index.html 文件来获取更多的自由和控制。同样也可以从 <a href="http://localhost:8080/webpack-dev-server/bundle" target="_blank" rel="external">http://localhost:8080/webpack-dev-server/bundle</a> 运行应用。这会触发一个默认的你不能控制的 index.html ，它同样会触发一个允许iFrame中显示重合并的过程。</p>
+<h2 id="引入文件"><a href="#引入文件" class="headerlink" title="引入文件"></a>引入文件</h2><h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>Webpack 允许你使用不同的模块类型，但是 “底层”必须使用同一种实现。所有的模块可以直接在盒外运行。</p>
+<ul>
+<li><p>ES6 模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import MyModule from &apos;./MyModule.js&apos;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>CommonJS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var MyModule = require(&apos;./MyModule.js&apos;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>AMD</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">define([&apos;./MyModule.js&apos;], function (MyModule) &#123;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="理解文件路径"><a href="#理解文件路径" class="headerlink" title="理解文件路径"></a>理解文件路径</h3><p>一个模块需要用它的文件路径来加载，看一下下面的这个结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/app</div><div class="line"></div><div class="line">/modules</div><div class="line">MyModule.js</div><div class="line">main.js (entry point)</div><div class="line">utils.js</div></pre></td></tr></table></figure></p>
+<p>打开 main.js 然后可以通过下面两种方式引入 app/modules/MyModule.js</p>
+<p>app/main.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// ES6</div><div class="line">import MyModule from &apos;./modules/MyModule.js&apos;;</div><div class="line"></div><div class="line">// CommonJS</div><div class="line">var MyModule = require(&apos;./modules/MyModule.js&apos;);</div></pre></td></tr></table></figure>
+<p>最开始的 ./ 是 “相对当前文件路径”</p>
+<p>让我们打开 MyModule.js 然后引入 app/utils：</p>
+<p>app/modules/MyModule.js</p>
+<p>全选复制放进笔记<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// ES6 相对路径</div><div class="line">import utils from &apos;./../utils.js&apos;;</div><div class="line"></div><div class="line">// ES6 绝对路径</div><div class="line">import utils from &apos;/utils.js&apos;;</div><div class="line"></div><div class="line">// CommonJS 相对路径</div><div class="line">var utils = require(&apos;./../utils.js&apos;);</div><div class="line"></div><div class="line">// CommonJS 绝对路径</div><div class="line">var utils = require(&apos;/utils.js&apos;);</div></pre></td></tr></table></figure></p>
+<p>相对路径是相对当前目录。绝对路径是相对入口文件，这个案例中是 main.js。</p>
+<h3 id="我需要使用文件后缀么？"><a href="#我需要使用文件后缀么？" class="headerlink" title="我需要使用文件后缀么？"></a>我需要使用文件后缀么？</h3><p>不，你不需要去特意去使用 .js，但是如果你引入之后高亮会更好。你可能有一些 .js 文件和一些 .jsx 文件，甚至一些图片和 css 可以用 Webpack 引入，甚至可以直接引入 node_modules 里的代码和特殊文件。</p>
+<p>记住，Webpack 只是一个模块合并！也就是说你可以设置他去加载任何你写的匹配，只要有一个加载器。我们稍后会继续深入这个话题。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Webpack和React小书&quot;&gt;&lt;a href=&quot;#Webpack和React小书&quot; class=&quot;headerlink&quot; title=&quot;Webpack和React小书&quot;&gt;&lt;/a&gt;Webpack和React小书&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;这本小书的目的是引导你进入 React 和 Webpack 的世界。他们两个都是非常有用的技术，如果同时使用他们，前端开发会更加有趣。&lt;/p&gt;
+&lt;p&gt;这本小书会提供所有相关的技能。如果你只是对 React 感兴趣，那可以跳过 Webpack 相关的内容，反之亦然。 如果想学习更多的相关知识可以移步 SurviveJS - Webpack and React。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端工程化" scheme="http://pengfei6.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
+    
+    
+      <category term="React" scheme="http://pengfei6.github.io/tags/React/"/>
+    
+      <category term="webpack" scheme="http://pengfei6.github.io/tags/webpack/"/>
     
   </entry>
   
@@ -904,9 +1584,9 @@ function unsetCookie(name) {
     <link href="http://pengfei6.github.io/2016/01/12/2015%E5%B9%B4%E5%A4%A7%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
     <id>http://pengfei6.github.io/2016/01/12/2015年大前端技术年终总结/</id>
     <published>2016-01-12T14:20:37.000Z</published>
-    <updated>2016-09-20T14:24:29.489Z</updated>
+    <updated>2016-09-20T15:06:17.136Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="2015年大前端技术年终总结"><a href="#2015年大前端技术年终总结" class="headerlink" title="2015年大前端技术年终总结"></a>2015年大前端技术年终总结</h1><blockquote>
+    <content type="html"><![CDATA[<blockquote>
 <p>数说前端技术，分类回顾点评。</p>
 </blockquote>
 <h2 id="1-前端"><a href="#1-前端" class="headerlink" title="1. 前端"></a>1. 前端</h2><h3 id="1-1-工具"><a href="#1-1-工具" class="headerlink" title="1.1 工具"></a>1.1 工具</h3><h4 id="1-1-1-构建工具"><a href="#1-1-1-构建工具" class="headerlink" title="1.1.1 构建工具"></a>1.1.1 构建工具</h4><ul>
@@ -1068,7 +1748,7 @@ function unsetCookie(name) {
     
     <summary type="html">
     
-      &lt;h1 id=&quot;2015年大前端技术年终总结&quot;&gt;&lt;a href=&quot;#2015年大前端技术年终总结&quot; class=&quot;headerlink&quot; title=&quot;2015年大前端技术年终总结&quot;&gt;&lt;/a&gt;2015年大前端技术年终总结&lt;/h1&gt;&lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;数说前端技术，分类回顾点评。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;1-前端&quot;&gt;&lt;a href=&quot;#1-前端&quot; class=&quot;headerlink&quot; title=&quot;1. 前端&quot;&gt;&lt;/a&gt;1. 前端&lt;/h2&gt;&lt;h3 id=&quot;1-1-工具&quot;&gt;&lt;a href=&quot;#1-1-工具&quot; class=&quot;headerlink&quot; title=&quot;1.1 工具&quot;&gt;&lt;/a&gt;1.1 工具&lt;/h3&gt;&lt;h4 id=&quot;1-1-1-构建工具&quot;&gt;&lt;a href=&quot;#1-1-1-构建工具&quot; class=&quot;headerlink&quot; title=&quot;1.1.1 构建工具&quot;&gt;&lt;/a&gt;1.1.1 构建工具&lt;/h4&gt;&lt;ul&gt;
@@ -1092,6 +1772,130 @@ function unsetCookie(name) {
       <category term="总结" scheme="http://pengfei6.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="2015" scheme="http://pengfei6.github.io/tags/2015/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端性能优化点总结</title>
+    <link href="http://pengfei6.github.io/2015/06/20/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%82%B9%E6%80%BB%E7%BB%93/"/>
+    <id>http://pengfei6.github.io/2015/06/20/性能优化点总结/</id>
+    <published>2015-06-20T12:16:14.000Z</published>
+    <updated>2016-09-20T15:01:19.838Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前端性能优化点总结"><a href="#前端性能优化点总结" class="headerlink" title="前端性能优化点总结"></a>前端性能优化点总结</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><ul>
+<li>前端性能优化不完全总结，性能优化任重而道远。但应该切记的是，不可为了优化而优化，性能优化和开发效率、用户体验以及实现成本等是相结合的。</li>
+<li>性能优化，其实现手段多样，关注领域复杂，从前到后，自上而下，方方面面都是性能优化的地方。  <a id="more"></a>
+<h2 id="2-图片"><a href="#2-图片" class="headerlink" title="2. 图片"></a>2. 图片</h2><h3 id="优化图像"><a href="#优化图像" class="headerlink" title="优化图像"></a>优化图像</h3><ul>
+<li>检查gif图片图像颜色数量和调色板规格是否一致</li>
+<li>有gif的情况考虑换成png</li>
+<li>色值较少的图片切成jpg</li>
+</ul>
+</li>
+</ul>
+<h3 id="Inline-images"><a href="#Inline-images" class="headerlink" title="Inline images"></a>Inline images</h3><ul>
+<li>通过编码的字符串将图片直接内嵌在网页文本中</li>
+<li>base64编码</li>
+</ul>
+<h3 id="image-Maps"><a href="#image-Maps" class="headerlink" title="image Maps"></a>image Maps</h3><ul>
+<li>将多张图拼在一起，通过坐标来控制显示导航</li>
+</ul>
+<h3 id="优化css-sptite，合成雪碧图"><a href="#优化css-sptite，合成雪碧图" class="headerlink" title="优化css sptite，合成雪碧图"></a>优化css sptite，合成雪碧图</h3><ul>
+<li>可以选用单独的工具来生成雪碧图</li>
+<li>使用构建工具来分析产出雪碧图</li>
+</ul>
+<h3 id="不在html中缩放图片"><a href="#不在html中缩放图片" class="headerlink" title="不在html中缩放图片"></a>不在html中缩放图片</h3><h3 id="使用小且可缓存defavicon-ico"><a href="#使用小且可缓存defavicon-ico" class="headerlink" title="使用小且可缓存defavicon.ico"></a>使用小且可缓存defavicon.ico</h3><ul>
+<li>浏览器总会去请求这个图标</li>
+<li>确保图标存在，否则报错</li>
+<li>文件尽量小，最好小于1K</li>
+<li>设置一个长的过期时间</li>
+</ul>
+<h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><ul>
+<li>规范  </li>
+<li>工具</li>
+</ul>
+<h2 id="3-javascript"><a href="#3-javascript" class="headerlink" title="3. javascript"></a>3. javascript</h2><h3 id="js脚本文件置底"><a href="#js脚本文件置底" class="headerlink" title="js脚本文件置底"></a>js脚本文件置底</h3><h3 id="现在主流浏览器都支持defer关键字，可以指定脚本在文档加载后执行"><a href="#现在主流浏览器都支持defer关键字，可以指定脚本在文档加载后执行" class="headerlink" title="现在主流浏览器都支持defer关键字，可以指定脚本在文档加载后执行"></a>现在主流浏览器都支持defer关键字，可以指定脚本在文档加载后执行</h3><h3 id="使用外链js和css文件"><a href="#使用外链js和css文件" class="headerlink" title="使用外链js和css文件"></a>使用外链js和css文件</h3><h3 id="精简代码"><a href="#精简代码" class="headerlink" title="精简代码"></a>精简代码</h3><h3 id="减少DOM访问和查询"><a href="#减少DOM访问和查询" class="headerlink" title="减少DOM访问和查询"></a>减少DOM访问和查询</h3><ul>
+<li>换成已经访问过的元素</li>
+<li>优化dom的选择器</li>
+<li>避免通过js修复layout</li>
+<li>优化逻辑减少dom操作</li>
+<li>双向数据绑定</li>
+<li>dom diff</li>
+<li>dom拼接<h3 id="减少或避免引起页面repaint或reflow的代码逻辑"><a href="#减少或避免引起页面repaint或reflow的代码逻辑" class="headerlink" title="减少或避免引起页面repaint或reflow的代码逻辑"></a>减少或避免引起页面repaint或reflow的代码逻辑</h3><h3 id="使用智能事件处理方式"><a href="#使用智能事件处理方式" class="headerlink" title="使用智能事件处理方式"></a>使用智能事件处理方式</h3></li>
+<li>事件代理<h3 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h3><h3 id="todo-1"><a href="#todo-1" class="headerlink" title="todo"></a>todo</h3></li>
+<li>形成规范进行培训</li>
+<li>代码检查工具</li>
+<li>性能监测工具</li>
+<li>代码走查</li>
+<li>将现有问题形成开发任务</li>
+</ul>
+<h2 id="4-css"><a href="#4-css" class="headerlink" title="4. css"></a>4. css</h2><h3 id="样式表置顶"><a href="#样式表置顶" class="headerlink" title="样式表置顶"></a>样式表置顶</h3><h3 id="避免css表达式"><a href="#避免css表达式" class="headerlink" title="避免css表达式"></a>避免css表达式</h3><h3 id="用link代替-import"><a href="#用link代替-import" class="headerlink" title="用link代替@import"></a>用link代替@import</h3><h3 id="减少层级"><a href="#减少层级" class="headerlink" title="减少层级"></a>减少层级</h3><h3 id="避免filters"><a href="#避免filters" class="headerlink" title="避免filters"></a>避免filters</h3><h3 id="避免冗余"><a href="#避免冗余" class="headerlink" title="避免冗余"></a>避免冗余</h3><h3 id="css文件合理管理"><a href="#css文件合理管理" class="headerlink" title="css文件合理管理"></a>css文件合理管理</h3><h3 id="todo-2"><a href="#todo-2" class="headerlink" title="todo"></a>todo</h3><ul>
+<li>代码规则检查工具</li>
+<li>代码规范培训</li>
+</ul>
+<h2 id="5-cookie"><a href="#5-cookie" class="headerlink" title="5. cookie"></a>5. cookie</h2><h3 id="减少cookie大小"><a href="#减少cookie大小" class="headerlink" title="减少cookie大小"></a>减少cookie大小</h3><ul>
+<li>cookie用来做认证和个性化设置，在请求中包含在http报文头</li>
+<li>如果网页不需要用cookie，就完全禁掉</li>
+<li>去除没必要的cookie</li>
+<li>cookie的domain不可影响到子domain</li>
+<li>设置合适的过期时间<h3 id="页面内容使用无cookie域名"><a href="#页面内容使用无cookie域名" class="headerlink" title="页面内容使用无cookie域名"></a>页面内容使用无cookie域名</h3></li>
+</ul>
+<h2 id="6-服务器"><a href="#6-服务器" class="headerlink" title="6. 服务器"></a>6. 服务器</h2><h3 id="使用cdn分发资源"><a href="#使用cdn分发资源" class="headerlink" title="使用cdn分发资源"></a>使用cdn分发资源</h3><ul>
+<li>CDN通过部署在不同地区的服务器来提高客户的下载速度</li>
+<li>可将站点大量的静态内容放上cdn<h3 id="添加expires或cache-control报文头"><a href="#添加expires或cache-control报文头" class="headerlink" title="添加expires或cache-control报文头"></a>添加expires或cache-control报文头</h3><ul>
+<li>静态内容添加expires，将静态内容设置为永不过期</li>
+</ul>
+</li>
+<li>动态内容适合cache-control，让浏览器根据条件来发送请求<h3 id="gzip压缩-配置etags"><a href="#gzip压缩-配置etags" class="headerlink" title="gzip压缩-  配置etags"></a>gzip压缩-  配置etags</h3><h3 id="flush输出"><a href="#flush输出" class="headerlink" title="flush输出"></a>flush输出</h3><h3 id="get请求"><a href="#get请求" class="headerlink" title="get请求"></a>get请求</h3><h3 id="避免空的图片src"><a href="#避免空的图片src" class="headerlink" title="避免空的图片src"></a>避免空的图片src</h3></li>
+<li>空的图片src仍然会使浏览器发送请求到服务器，这样完全是浪费时间，而且浪费服务器的资源</li>
+</ul>
+<h2 id="7-网页内容"><a href="#7-网页内容" class="headerlink" title="7. 网页内容"></a>7. 网页内容</h2><h3 id="减少http请求次数"><a href="#减少http请求次数" class="headerlink" title="减少http请求次数"></a>减少http请求次数</h3><ul>
+<li>combo合并多个文件请求为一个</li>
+<li>打包合并文件，打包策略很重要<h3 id="减少dns查询次数"><a href="#减少dns查询次数" class="headerlink" title="减少dns查询次数"></a>减少dns查询次数</h3></li>
+<li>愿意在于网页中包含不同domain的内容时，如嵌入广告或引用了外部图片或脚本导致</li>
+<li>dns查询结果可缓存在本地和浏览器一段时间，所以一般在首次访问时消耗流量<h3 id="避免页面跳转"><a href="#避免页面跳转" class="headerlink" title="避免页面跳转"></a>避免页面跳转</h3><h3 id="缓存ajax请求"><a href="#缓存ajax请求" class="headerlink" title="缓存ajax请求"></a>缓存ajax请求</h3><h3 id="延迟加载"><a href="#延迟加载" class="headerlink" title="延迟加载"></a>延迟加载</h3></li>
+<li>确定页面初始加载需要的最小内容集，剩下内容推到延迟加载的集合中<h3 id="提前加载"><a href="#提前加载" class="headerlink" title="提前加载"></a>提前加载</h3></li>
+<li>有条件提前加载<ul>
+<li>用户的输入推断需要加载的内容，如智能搜索框</li>
+</ul>
+</li>
+<li>无条件提前加载<ul>
+<li>当前网页加载完成后，马上去下载一些其他的内容，这些内容是必须会用到的或是公共依赖的<h3 id="减少DOM元素数量"><a href="#减少DOM元素数量" class="headerlink" title="减少DOM元素数量"></a>减少DOM元素数量</h3><h3 id="根据域名划分内容"><a href="#根据域名划分内容" class="headerlink" title="根据域名划分内容"></a>根据域名划分内容</h3><h3 id="减少iframe数量"><a href="#减少iframe数量" class="headerlink" title="减少iframe数量"></a>减少iframe数量</h3></li>
+</ul>
+</li>
+<li>优点<ul>
+<li>用来加载速度较慢的广告</li>
+<li>安全沙箱保护</li>
+<li>脚本可以并行下载</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>即使iframe内容为空也消耗加载时间</li>
+<li>会阻止页面的加载<h3 id="避免404"><a href="#避免404" class="headerlink" title="避免404"></a>避免404</h3></li>
+</ul>
+</li>
+</ul>
+<h2 id="8-移动端"><a href="#8-移动端" class="headerlink" title="8. 移动端"></a>8. 移动端</h2><h3 id="localStorage本地存储与优化"><a href="#localStorage本地存储与优化" class="headerlink" title="localStorage本地存储与优化"></a>localStorage本地存储与优化</h3><ul>
+<li>大数据量交互，数据不怎么更新的，含版本控制机制，一次请求，之后高枕无忧</li>
+<li>充分利用其资源<h3 id="保持单个内容小于25K"><a href="#保持单个内容小于25K" class="headerlink" title="保持单个内容小于25K"></a>保持单个内容小于25K</h3></li>
+<li>这是因为iphone的限制，它只能缓存解压后小于25K的资源</li>
+<li>所以单纯gzip不一定够用，精简文件工具<h3 id="打包文档"><a href="#打包文档" class="headerlink" title="打包文档"></a>打包文档</h3><h3 id="quikling方案"><a href="#quikling方案" class="headerlink" title="quikling方案"></a>quikling方案</h3></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前端性能优化点总结&quot;&gt;&lt;a href=&quot;#前端性能优化点总结&quot; class=&quot;headerlink&quot; title=&quot;前端性能优化点总结&quot;&gt;&lt;/a&gt;前端性能优化点总结&lt;/h1&gt;&lt;h2 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1. 前言&quot;&gt;&lt;/a&gt;1. 前言&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;前端性能优化不完全总结，性能优化任重而道远。但应该切记的是，不可为了优化而优化，性能优化和开发效率、用户体验以及实现成本等是相结合的。&lt;/li&gt;
+&lt;li&gt;性能优化，其实现手段多样，关注领域复杂，从前到后，自上而下，方方面面都是性能优化的地方。
+    
+    </summary>
+    
+      <category term="总结整理" scheme="http://pengfei6.github.io/categories/%E6%80%BB%E7%BB%93%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="前端" scheme="http://pengfei6.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="性能优化" scheme="http://pengfei6.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
@@ -1164,9 +1968,9 @@ function unsetCookie(name) {
     <link href="http://pengfei6.github.io/2014/11/20/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84/"/>
     <id>http://pengfei6.github.io/2014/11/20/面向对象和数组/</id>
     <published>2014-11-20T12:16:14.000Z</published>
-    <updated>2016-09-20T14:20:14.873Z</updated>
+    <updated>2016-09-20T15:38:13.784Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="面-向-对-象-和-数-组"><a href="#面-向-对-象-和-数-组" class="headerlink" title="面 向 对 象 和 数 组"></a>面 向 对 象 和 数 组</h1><h2 id="1-对象"><a href="#1-对象" class="headerlink" title="1 对象"></a>1 对象</h2><h3 id="1-1-初识对象"><a href="#1-1-初识对象" class="headerlink" title="1.1 初识对象"></a>1.1 初识对象</h3><p>对象在JavaScript中是对数据类型的笼统的称呼，对象本身也是一种数据类型，在基础课程中讲了单一的值类型，如：</p>
+    <content type="html"><![CDATA[<h2 id="1-对象"><a href="#1-对象" class="headerlink" title="1 对象"></a>1 对象</h2><h3 id="1-1-初识对象"><a href="#1-1-初识对象" class="headerlink" title="1.1 初识对象"></a>1.1 初识对象</h3><p>对象在JavaScript中是对数据类型的笼统的称呼，对象本身也是一种数据类型，在基础课程中讲了单一的值类型，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var n = 0;	//number类型</div><div class="line">var b = true;	//boolean类型</div><div class="line">var str = &apos;abc&apos;;	//string类型</div></pre></td></tr></table></figure>
 <p>在Javasript中，一共有五种基本的数据类型（null，undefined，string，boolean，number），由于这几种简单的数据类型是按值传递，故而也可以称之为值类型数据。这类数据类型有一个共同的特点，就是它们都表示的是一个值。就是一个数据只表示了一个值，它对应的变量也是只保存了这一个值。就是说i=3这个表达式中，3就是一个单一的数，那么i也只保存了3这么一个值。<br><a id="more"></a></p>
 <blockquote>
@@ -1231,7 +2035,7 @@ function unsetCookie(name) {
 <li>补充2：数据不单单是一个值，数据也有功能</li>
 </ul>
 <p>比如说，人就是一个抽象的值，不仅仅是一个信息的载体，还可以完成很多功能，比如：会上课会捣乱。数据的范围很广，也是一个数据体。Function类型的数据可以完成很多不同的功能。也就是说函数（function）也是数据。</p>
-<p>少一个原型模式（prototype),一定要加上<br>不重复制造轮子的原则：原型模式</p>
+<p>少一个原型模式prototype,一定要加上<br>不重复制造轮子的原则：原型模式</p>
 <h3 id="2-4-兼顾以上二者的混合模式"><a href="#2-4-兼顾以上二者的混合模式" class="headerlink" title="2.4 兼顾以上二者的混合模式"></a>2.4 兼顾以上二者的混合模式</h3><blockquote>
 <p>注：这里的模式，就是指生产方式，创建对象的方式。这里说的这些设计模式，叫“创建型设计模式”，是诸多的设计模式中的一种</p>
 </blockquote>
@@ -1307,7 +2111,7 @@ function unsetCookie(name) {
     
     <summary type="html">
     
-      &lt;h1 id=&quot;面-向-对-象-和-数-组&quot;&gt;&lt;a href=&quot;#面-向-对-象-和-数-组&quot; class=&quot;headerlink&quot; title=&quot;面 向 对 象 和 数 组&quot;&gt;&lt;/a&gt;面 向 对 象 和 数 组&lt;/h1&gt;&lt;h2 id=&quot;1-对象&quot;&gt;&lt;a href=&quot;#1-对象&quot; class=&quot;headerlink&quot; title=&quot;1 对象&quot;&gt;&lt;/a&gt;1 对象&lt;/h2&gt;&lt;h3 id=&quot;1-1-初识对象&quot;&gt;&lt;a href=&quot;#1-1-初识对象&quot; class=&quot;headerlink&quot; title=&quot;1.1 初识对象&quot;&gt;&lt;/a&gt;1.1 初识对象&lt;/h3&gt;&lt;p&gt;对象在JavaScript中是对数据类型的笼统的称呼，对象本身也是一种数据类型，在基础课程中讲了单一的值类型，如：&lt;/p&gt;
+      &lt;h2 id=&quot;1-对象&quot;&gt;&lt;a href=&quot;#1-对象&quot; class=&quot;headerlink&quot; title=&quot;1 对象&quot;&gt;&lt;/a&gt;1 对象&lt;/h2&gt;&lt;h3 id=&quot;1-1-初识对象&quot;&gt;&lt;a href=&quot;#1-1-初识对象&quot; class=&quot;headerlink&quot; title=&quot;1.1 初识对象&quot;&gt;&lt;/a&gt;1.1 初识对象&lt;/h3&gt;&lt;p&gt;对象在JavaScript中是对数据类型的笼统的称呼，对象本身也是一种数据类型，在基础课程中讲了单一的值类型，如：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var n = 0;	//number类型&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var b = true;	//boolean类型&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var str = &amp;apos;abc&amp;apos;;	//string类型&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;在Javasript中，一共有五种基本的数据类型（null，undefined，string，boolean，number），由于这几种简单的数据类型是按值传递，故而也可以称之为值类型数据。这类数据类型有一个共同的特点，就是它们都表示的是一个值。就是一个数据只表示了一个值，它对应的变量也是只保存了这一个值。就是说i=3这个表达式中，3就是一个单一的数，那么i也只保存了3这么一个值。&lt;br&gt;
     
